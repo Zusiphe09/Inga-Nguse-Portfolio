@@ -14,18 +14,19 @@ export const Route = createFileRoute("/education")({
 
 const ENTRIES = [
   {
-    years: "2022 – 2024",
-    title: "Diploma in IT (Support Services)",
-    institution: "Nelson Mandela University",
-    body: "Comprehensive foundation in technical support, hardware, networking, operating systems, and end-user service delivery.",
-  },
-  {
     years: "2025",
     title: "Advanced Diploma in Information Technology",
     institution: "Nelson Mandela University",
     body: "Deeper specialization in systems thinking, software development, data, and modern IT practices.",
   },
+  {
+    years: "2022 – 2024",
+    title: "Diploma in IT (Support Services)",
+    institution: "Nelson Mandela University",
+    body: "Comprehensive foundation in technical support, hardware, networking, operating systems, and end-user service delivery.",
+  },
 ];
+
 
 const SKILLS = [
   "Technical Support",
