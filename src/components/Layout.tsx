@@ -94,14 +94,33 @@ export function Layout({ children }: { children?: React.ReactNode }) {
             <p className="mt-2 text-sm text-muted-foreground max-w-xs">
               IT Support Specialist turning technical problems into simple solutions.
             </p>
-            <a
-              href="https://github.com/Zusiphe09"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              <Github size={16} /> github.com/Zusiphe09
-            </a>
+            <div className="mt-4 flex items-center gap-2">
+              <a
+                href="https://www.linkedin.com/in/inga-nguse-4902323a5"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <Linkedin size={16} />
+              </a>
+              <a
+                href="https://github.com/Zusiphe09"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <Github size={16} />
+              </a>
+              <a
+                href="mailto:inganguse09@gmail.com"
+                aria-label="Email"
+                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <Mail size={16} />
+              </a>
+            </div>
           </div>
           <div>
             <div className="font-semibold text-sm text-foreground mb-3">Navigate</div>
@@ -118,10 +137,19 @@ export function Layout({ children }: { children?: React.ReactNode }) {
           <div>
             <div className="font-semibold text-sm text-foreground mb-3">Contact</div>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Phone size={14} /> 081 0049 960</li>
-              <li className="flex items-center gap-2"><Mail size={14} /> inganguse09@gmail.com</li>
+              <li>
+                <a href="tel:+27810049960" className="inline-flex items-center gap-2 hover:text-primary transition-colors">
+                  <Phone size={14} /> 081 0049 960
+                </a>
+              </li>
+              <li>
+                <a href="mailto:inganguse09@gmail.com" className="inline-flex items-center gap-2 hover:text-primary transition-colors">
+                  <Mail size={14} /> inganguse09@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
+
         </div>
         <div className="border-t border-border">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
