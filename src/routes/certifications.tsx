@@ -14,7 +14,7 @@ export const Route = createFileRoute("/certifications")({
   component: () => (<Layout><Certifications /></Layout>),
 });
 
-type Cert = { id: string; title: string; provider: string; file_url: string };
+type Cert = { id: string; title: string; provider: string; file_url: string; file_path: string | null };
 
 const FOCUS = [
   { count: 8, label: "IT Support" },
@@ -30,7 +30,7 @@ function Certifications() {
   useEffect(() => {
     supabase
       .from("certificates")
-      .select("id, title, provider, file_url")
+      .select("id, title, provider, file_url, file_path")
       .order("provider", { ascending: true })
       .order("sort_order", { ascending: true })
       .then(({ data }) => {
@@ -38,6 +38,18 @@ function Certifications() {
         setLoading(false);
       });
   }, []);
+
+  async function openCert(c: Cert) {
+    if (c.file_path) {
+      const { data, error } = await supabase.storage.from("certificates").createSignedUrl(c.file_path, 3600);
+      if (!error && data?.signedUrl) {
+        window.open(data.signedUrl, "_blank", "noopener,noreferrer");
+        return;
+      }
+    }
+    if (c.file_url) window.open(c.file_url, "_blank", "noopener,noreferrer");
+  }
+
 
   const grouped = certs.reduce<Record<string, Cert[]>>((acc, c) => {
     (acc[c.provider] ||= []).push(c);
