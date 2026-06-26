@@ -18,8 +18,17 @@ const PROJECTS = [
     status: "Completed",
     statusTone: "completed" as const,
     icon: Activity,
-    desc: "A centralized monitoring solution to track system health, uptime, and alerts across IT infrastructure. Designed for fast diagnostics and clear visibility for support teams.",
-    stack: ["Monitoring", "Dashboards", "Alerting", "Systems Admin"],
+    desc: "Comprehensive SQL Server and Power BI solution for real-time IT infrastructure monitoring and reporting.",
+    role: "Database Developer & BI Analyst",
+    stack: ["SQL Server", "Power BI", "T-SQL", "DAX", "Data Modeling"],
+    outcomes: [
+      "Real-time system performance monitoring with automated alerts",
+      "Incident tracking and resolution time analysis",
+      "SLA compliance reporting with visual dashboards",
+      "Security monitoring and threat detection metrics",
+      "Interactive dashboards for stakeholder reporting",
+      "Reduced incident response time by 37% through proactive monitoring",
+    ],
     link: null as string | null,
   },
   {
@@ -27,11 +36,21 @@ const PROJECTS = [
     status: "In Progress",
     statusTone: "progress" as const,
     icon: Headset,
-    desc: "A modern helpdesk and ticketing platform tailored for African businesses — focused on accessibility, fast triage, and a clean experience for both agents and end users.",
-    stack: ["Helpdesk", "Ticketing", "Auth", "Web App"],
+    desc: "AI-powered workplace ticketing platform designed to streamline IT support operations with intelligent automation and predictive analytics.",
+    role: "Lead Developer & System Architect",
+    stack: ["React", "Node.js", "AI/ML", "Database Design", "API Development"],
+    outcomes: [
+      "Automated ticket prioritization using machine learning algorithms",
+      "Intelligent routing based on technician expertise and workload",
+      "Predictive insights for proactive issue resolution",
+      "Self-service knowledge base with AI-powered search",
+      "Real-time analytics and performance metrics",
+      "Integration with existing IT infrastructure",
+    ],
     link: "https://persona-powered-biz.lovable.app/auth",
   },
 ];
+
 
 function Projects() {
   return (
@@ -62,13 +81,32 @@ function Projects() {
             </div>
             <h2 className="mt-5 text-xl font-semibold text-foreground">{p.title}</h2>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-            <div className="mt-5 flex flex-wrap gap-1.5">
-              {p.stack.map((s) => (
-                <span key={s} className="inline-flex px-2.5 py-1 rounded-md bg-muted text-foreground/80 text-xs font-medium">
-                  {s}
-                </span>
-              ))}
+            <div className="mt-4">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Role</div>
+              <div className="mt-1 text-sm text-foreground">{p.role}</div>
             </div>
+            <div className="mt-4">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Technologies</div>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {p.stack.map((s) => (
+                  <span key={s} className="inline-flex px-2.5 py-1 rounded-md bg-muted text-foreground/80 text-xs font-medium">
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Key outcomes</div>
+              <ul className="mt-2 space-y-1.5">
+                {p.outcomes.map((o) => (
+                  <li key={o} className="flex gap-2.5 text-sm text-muted-foreground">
+                    <span className="mt-2 size-1.5 rounded-full bg-primary flex-none" />
+                    <span>{o}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {p.link && (
               <a
                 href={p.link}

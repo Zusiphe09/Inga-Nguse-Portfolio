@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Wrench, BarChart3, ShieldCheck, Lightbulb, ArrowRight, MapPin } from "lucide-react";
+import { Wrench, BarChart3, ShieldCheck, Lightbulb, ArrowRight, MapPin, Download } from "lucide-react";
 import portrait from "@/assets/inga-portrait.jpeg.asset.json";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -21,9 +21,13 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const [location, setLocation] = useState("Port Elizabeth, South Africa");
+  const [cvUrl, setCvUrl] = useState<string | null>(null);
   useEffect(() => {
-    supabase.from("site_settings").select("value").eq("key", "location").maybeSingle().then(({ data }) => {
-      if (data?.value) setLocation(data.value);
+    supabase.from("site_settings").select("key,value").in("key", ["location", "cv_url"]).then(({ data }) => {
+      const loc = data?.find((r) => r.key === "location")?.value;
+      const cv = data?.find((r) => r.key === "cv_url")?.value;
+      if (loc) setLocation(loc);
+      if (cv) setCvUrl(cv);
     });
   }, []);
 
@@ -39,13 +43,11 @@ function Home() {
             Inga Nguse
           </h1>
           <p className="mt-3 text-xl sm:text-2xl font-semibold text-primary">IT Support Specialist</p>
-          <p className="mt-5 text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Turning technical problems into simple solutions.
-          </p>
-          <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-            A passionate IT professional with a foundation in support services and advanced
-            information technology, focused on building reliable systems, resolving issues
-            efficiently, and delivering technology that quietly works.
+          <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+            IT Support Specialist with a strong foundation in information technology and a
+            passion for solving complex technical challenges. Based in Port Elizabeth, South
+            Africa, I combine a solid academic background with hands-on experience to deliver
+            reliable, user-focused technical support and innovative solutions.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -54,8 +56,20 @@ function Home() {
             >
               View Portfolio <ArrowRight size={16} />
             </Link>
+            {cvUrl && (
+              <a
+                href={cvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background text-foreground px-6 py-3 text-sm font-semibold hover:bg-muted transition-colors"
+              >
+                <Download size={16} /> Download CV
+              </a>
+            )}
           </div>
         </div>
+
         <div className="relative">
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary-soft to-transparent -z-10" />
           <div className="relative rounded-3xl overflow-hidden shadow-elevated bg-card aspect-[4/5] max-w-md mx-auto">

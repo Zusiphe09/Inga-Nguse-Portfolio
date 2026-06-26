@@ -25,27 +25,26 @@ function About() {
         <div className="space-y-5 text-muted-foreground leading-relaxed">
           <h2 className="text-2xl font-semibold text-foreground">Personal background</h2>
           <p>
-            I'm Inga Nguse, an IT Support Specialist based in Port Elizabeth, South Africa.
-            My journey into technology started with curiosity — pulling apart how things work,
-            understanding why systems fail, and figuring out how to make them better.
+            I am Inga Nguse, an IT Support Specialist with a strong foundation in information
+            technology and a passion for solving complex technical challenges. My journey in IT
+            began with a curiosity about how technology works and has evolved into a dedicated
+            career focused on providing exceptional technical support and innovative solutions.
           </p>
           <p>
-            With a Diploma in IT (Support Services) and an Advanced Diploma in Information
-            Technology from Nelson Mandela University, I've built a strong foundation in
-            systems administration, technical support, cloud technologies, and IT service
-            management.
+            With a Diploma and Advanced Diploma in Information Technology from Nelson Mandela
+            University, I have built a solid academic foundation that complements my practical
+            experience. My approach to IT support is centered on understanding user needs,
+            communicating technical concepts clearly, and delivering solutions that enhance
+            productivity and user satisfaction.
           </p>
           <p>
-            Beyond credentials, what defines my approach is patience and precision. Every
-            ticket, every user, every outage is a chance to listen first, diagnose carefully,
-            and deliver a solution that actually sticks. I believe great IT support is invisible —
-            you only notice it when it's missing.
-          </p>
-          <p>
-            Outside of work, I keep learning. Certifications, side projects, and reading keep
-            my skills sharp and aligned with where the industry is moving.
+            Beyond technical skills, I believe in the power of continuous learning and staying
+            current with emerging technologies. This commitment is reflected in my extensive
+            collection of certifications from leading technology providers including Google,
+            IBM, AWS, and DeepLearning.AI.
           </p>
         </div>
+
         <div className="relative">
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary-soft to-transparent -z-10" />
           <div className="relative rounded-3xl overflow-hidden shadow-elevated bg-card aspect-[4/5] max-w-md mx-auto">

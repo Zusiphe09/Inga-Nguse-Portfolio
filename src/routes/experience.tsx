@@ -16,14 +16,14 @@ const ENTRIES = [
   {
     period: "Present",
     title: "CAPACITI",
-    role: "IT Trainee & Project Contributor",
+    role: "CAPACITI Candidate",
     icon: Briefcase,
     points: [
-      "IT training and professional development",
-      "Systems administration",
-      "Real-world IT projects",
-      "Cloud technologies",
-      "IT service management",
+      "Participating in intensive IT training and professional development program",
+      "Gaining hands-on experience in enterprise IT support and systems administration",
+      "Collaborating with industry professionals on real-world IT projects",
+      "Developing skills in modern IT infrastructure and cloud technologies",
+      "Building expertise in IT service management and best practices",
     ],
   },
   {
@@ -32,12 +32,16 @@ const ENTRIES = [
     role: "Examination Assistant",
     icon: FileCheck,
     points: [
-      "Technical and administrative support",
-      "Documentation and quality control",
-      "Examination coordination",
+      "Provided technical and administrative support during examination periods",
+      "Managed examination materials and ensured secure handling of documents",
+      "Assisted in coordinating examination logistics and scheduling",
+      "Maintained accurate records and documentation",
+      "Supported quality assurance processes for examination administration",
+      "Demonstrated attention to detail and ability to work under pressure",
     ],
   },
 ];
+
 
 const SKILLS = {
   Technical: ["Systems administration", "Cloud technologies", "IT service management", "Troubleshooting"],
