@@ -94,33 +94,6 @@ export function Layout({ children }: { children?: React.ReactNode }) {
             <p className="mt-2 text-sm text-muted-foreground max-w-xs">
               IT Support Specialist turning technical problems into simple solutions.
             </p>
-            <div className="mt-4 flex items-center gap-2">
-              <a
-                href="https://www.linkedin.com/in/inga-nguse-4902323a5"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-              >
-                <Linkedin size={16} />
-              </a>
-              <a
-                href="https://github.com/Zusiphe09"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-              >
-                <Github size={16} />
-              </a>
-              <a
-                href="mailto:inganguse09@gmail.com"
-                aria-label="Email"
-                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-              >
-                <Mail size={16} />
-              </a>
-            </div>
           </div>
           <div>
             <div className="font-semibold text-sm text-foreground mb-3">Navigate</div>
@@ -148,6 +121,33 @@ export function Layout({ children }: { children?: React.ReactNode }) {
                 </a>
               </li>
             </ul>
+            <div className="mt-4 flex items-center gap-2 md:justify-end">
+              <a
+                href="https://www.linkedin.com/in/inga-nguse-4902323a5"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <Linkedin size={16} />
+              </a>
+              <a
+                href="https://github.com/Zusiphe09"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <Github size={16} />
+              </a>
+              <a
+                href="mailto:inganguse09@gmail.com"
+                aria-label="Email"
+                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <Mail size={16} />
+              </a>
+            </div>
           </div>
 
         </div>

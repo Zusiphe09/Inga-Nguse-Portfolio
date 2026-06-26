@@ -104,6 +104,20 @@ function CvEditor() {
   const [savedAt, setSavedAt] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  async function previewCv() {
+    if (!value) return;
+    if (value.startsWith("/") || /^https?:\/\//i.test(value)) {
+      window.open(value, "_blank", "noopener,noreferrer");
+      return;
+    }
+    const { data, error: signedError } = await supabase.storage.from("certificates").createSignedUrl(value, 3600);
+    if (signedError) {
+      setError(signedError.message);
+      return;
+    }
+    if (data?.signedUrl) window.open(data.signedUrl, "_blank", "noopener,noreferrer");
+  }
+
   useEffect(() => {
     supabase.from("site_settings").select("value").eq("key", "cv_url").maybeSingle().then(({ data }) => {
       setValue(data?.value ?? "");
@@ -172,9 +186,9 @@ function CvEditor() {
       </div>
       {error && <div className="mt-2 text-sm text-destructive">{error}</div>}
       {value && (
-        <a href={value} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-xs text-primary hover:underline">
+        <button type="button" onClick={previewCv} className="mt-3 inline-block text-xs text-primary hover:underline">
           Preview current CV →
-        </a>
+        </button>
       )}
     </section>
   );
