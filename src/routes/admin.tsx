@@ -43,6 +43,8 @@ function Admin() {
 
       <div className="mt-10 space-y-10">
         <LocationEditor />
+        <CvEditor />
+
         <CertificateManager />
         <Messages />
       </div>
