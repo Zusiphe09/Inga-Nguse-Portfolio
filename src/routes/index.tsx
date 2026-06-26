@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const [location, setLocation] = useState("Port Elizabeth, South Africa");
-  const [cvUrl, setCvUrl] = useState<string | null>(null);
+  const [cvUrl, setCvUrl] = useState<string | null>("/inga-nguse-cv.pdf");
   useEffect(() => {
     supabase.from("site_settings").select("key,value").in("key", ["location", "cv_url"]).then(({ data }) => {
       const loc = data?.find((r) => r.key === "location")?.value;
@@ -60,6 +60,10 @@ function Home() {
               <button
                 type="button"
                 onClick={async () => {
+                  if (cvUrl.startsWith("/")) {
+                    window.open(cvUrl, "_blank", "noopener,noreferrer");
+                    return;
+                  }
                   if (/^https?:\/\//i.test(cvUrl)) {
                     window.open(cvUrl, "_blank", "noopener,noreferrer");
                     return;
