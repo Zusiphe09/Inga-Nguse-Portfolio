@@ -3,7 +3,7 @@ import { Layout } from "@/components/Layout";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
-import { Trash2, Upload, Pencil, LogOut, MapPin, Mail, Save, X } from "lucide-react";
+import { Trash2, Upload, Pencil, LogOut, MapPin, Mail, Save, X, FileText } from "lucide-react";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({ meta: [{ title: "Admin — Inga Nguse" }] }),
