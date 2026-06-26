@@ -126,9 +126,9 @@ function CvEditor() {
     const path = `cv/${Date.now()}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
     const { error: upErr } = await supabase.storage.from("certificates").upload(path, file, { upsert: true });
     if (upErr) { setError(upErr.message); setUploading(false); return; }
-    const { data: pub } = supabase.storage.from("certificates").getPublicUrl(path);
-    setValue(pub.publicUrl);
-    await save(pub.publicUrl);
+    setValue(path);
+    await save(path);
+
     setFile(null);
     const input = document.getElementById("cv-file") as HTMLInputElement | null;
     if (input) input.value = "";
