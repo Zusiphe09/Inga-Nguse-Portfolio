@@ -13,7 +13,7 @@ const NAV = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-export function Layout() {
+export function Layout({ children }: { children?: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
@@ -84,7 +84,7 @@ export function Layout() {
       </header>
 
       <main className="flex-1">
-        <Outlet />
+        {children ?? <Outlet />}
       </main>
 
       <footer className="border-t border-border bg-muted/30">
