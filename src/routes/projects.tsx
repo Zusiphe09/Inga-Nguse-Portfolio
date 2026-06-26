@@ -81,13 +81,32 @@ function Projects() {
             </div>
             <h2 className="mt-5 text-xl font-semibold text-foreground">{p.title}</h2>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-            <div className="mt-5 flex flex-wrap gap-1.5">
-              {p.stack.map((s) => (
-                <span key={s} className="inline-flex px-2.5 py-1 rounded-md bg-muted text-foreground/80 text-xs font-medium">
-                  {s}
-                </span>
-              ))}
+            <div className="mt-4">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Role</div>
+              <div className="mt-1 text-sm text-foreground">{p.role}</div>
             </div>
+            <div className="mt-4">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Technologies</div>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {p.stack.map((s) => (
+                  <span key={s} className="inline-flex px-2.5 py-1 rounded-md bg-muted text-foreground/80 text-xs font-medium">
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Key outcomes</div>
+              <ul className="mt-2 space-y-1.5">
+                {p.outcomes.map((o) => (
+                  <li key={o} className="flex gap-2.5 text-sm text-muted-foreground">
+                    <span className="mt-2 size-1.5 rounded-full bg-primary flex-none" />
+                    <span>{o}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {p.link && (
               <a
                 href={p.link}
