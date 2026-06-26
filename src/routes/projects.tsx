@@ -18,8 +18,17 @@ const PROJECTS = [
     status: "Completed",
     statusTone: "completed" as const,
     icon: Activity,
-    desc: "A centralized monitoring solution to track system health, uptime, and alerts across IT infrastructure. Designed for fast diagnostics and clear visibility for support teams.",
-    stack: ["Monitoring", "Dashboards", "Alerting", "Systems Admin"],
+    desc: "Comprehensive SQL Server and Power BI solution for real-time IT infrastructure monitoring and reporting.",
+    role: "Database Developer & BI Analyst",
+    stack: ["SQL Server", "Power BI", "T-SQL", "DAX", "Data Modeling"],
+    outcomes: [
+      "Real-time system performance monitoring with automated alerts",
+      "Incident tracking and resolution time analysis",
+      "SLA compliance reporting with visual dashboards",
+      "Security monitoring and threat detection metrics",
+      "Interactive dashboards for stakeholder reporting",
+      "Reduced incident response time by 37% through proactive monitoring",
+    ],
     link: null as string | null,
   },
   {
@@ -27,11 +36,21 @@ const PROJECTS = [
     status: "In Progress",
     statusTone: "progress" as const,
     icon: Headset,
-    desc: "A modern helpdesk and ticketing platform tailored for African businesses — focused on accessibility, fast triage, and a clean experience for both agents and end users.",
-    stack: ["Helpdesk", "Ticketing", "Auth", "Web App"],
+    desc: "AI-powered workplace ticketing platform designed to streamline IT support operations with intelligent automation and predictive analytics.",
+    role: "Lead Developer & System Architect",
+    stack: ["React", "Node.js", "AI/ML", "Database Design", "API Development"],
+    outcomes: [
+      "Automated ticket prioritization using machine learning algorithms",
+      "Intelligent routing based on technician expertise and workload",
+      "Predictive insights for proactive issue resolution",
+      "Self-service knowledge base with AI-powered search",
+      "Real-time analytics and performance metrics",
+      "Integration with existing IT infrastructure",
+    ],
     link: "https://persona-powered-biz.lovable.app/auth",
   },
 ];
+
 
 function Projects() {
   return (
