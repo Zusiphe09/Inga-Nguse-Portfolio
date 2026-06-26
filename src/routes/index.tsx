@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Wrench, BarChart3, ShieldCheck, Lightbulb, ArrowRight, MapPin } from "lucide-react";
+import { Wrench, BarChart3, ShieldCheck, Lightbulb, ArrowRight, MapPin, Download } from "lucide-react";
 import portrait from "@/assets/inga-portrait.jpeg.asset.json";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
