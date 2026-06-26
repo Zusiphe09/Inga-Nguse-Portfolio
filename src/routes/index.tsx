@@ -57,16 +57,22 @@ function Home() {
               View Portfolio <ArrowRight size={16} />
             </Link>
             {cvUrl && (
-              <a
-                href={cvUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                download
+              <button
+                type="button"
+                onClick={async () => {
+                  if (/^https?:\/\//i.test(cvUrl)) {
+                    window.open(cvUrl, "_blank", "noopener,noreferrer");
+                    return;
+                  }
+                  const { data } = await supabase.storage.from("certificates").createSignedUrl(cvUrl, 3600);
+                  if (data?.signedUrl) window.open(data.signedUrl, "_blank", "noopener,noreferrer");
+                }}
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-background text-foreground px-6 py-3 text-sm font-semibold hover:bg-muted transition-colors"
               >
                 <Download size={16} /> Download CV
-              </a>
+              </button>
             )}
+
           </div>
         </div>
 
