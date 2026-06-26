@@ -96,6 +96,91 @@ function LocationEditor() {
   );
 }
 
+function CvEditor() {
+  const [value, setValue] = useState("");
+  const [file, setFile] = useState<File | null>(null);
+  const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [savedAt, setSavedAt] = useState<number | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    supabase.from("site_settings").select("value").eq("key", "cv_url").maybeSingle().then(({ data }) => {
+      setValue(data?.value ?? "");
+    });
+  }, []);
+
+  async function save(newValue?: string) {
+    const v = newValue ?? value;
+    setSaving(true);
+    await supabase.from("site_settings").upsert({ key: "cv_url", value: v });
+    setSaving(false);
+    setSavedAt(Date.now());
+    setTimeout(() => setSavedAt(null), 2000);
+  }
+
+  async function uploadCv() {
+    setError(null);
+    if (!file) { setError("Choose a PDF file first."); return; }
+    setUploading(true);
+    const path = `cv/${Date.now()}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
+    const { error: upErr } = await supabase.storage.from("certificates").upload(path, file, { upsert: true });
+    if (upErr) { setError(upErr.message); setUploading(false); return; }
+    const { data: pub } = supabase.storage.from("certificates").getPublicUrl(path);
+    setValue(pub.publicUrl);
+    await save(pub.publicUrl);
+    setFile(null);
+    const input = document.getElementById("cv-file") as HTMLInputElement | null;
+    if (input) input.value = "";
+    setUploading(false);
+  }
+
+  return (
+    <section className="bg-card border border-border rounded-2xl p-6 shadow-soft">
+      <h2 className="font-semibold flex items-center gap-2"><FileText size={16} className="text-primary" /> CV (Download link)</h2>
+      <p className="mt-1 text-xs text-muted-foreground">Paste a public URL or upload a PDF. Leave blank to hide the Download CV button.</p>
+      <div className="mt-4 flex flex-col sm:flex-row gap-2">
+        <input
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder="https://…/inga-nguse-cv.pdf"
+          className="flex-1 rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
+        />
+        <button
+          onClick={() => save()}
+          disabled={saving}
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+        >
+          <Save size={14} /> {saving ? "Saving…" : savedAt ? "Saved" : "Save"}
+        </button>
+      </div>
+      <div className="mt-4 flex flex-col sm:flex-row gap-2">
+        <input
+          id="cv-file"
+          type="file"
+          accept="application/pdf"
+          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+          className="flex-1 rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
+        />
+        <button
+          onClick={uploadCv}
+          disabled={uploading || !file}
+          className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+        >
+          <Upload size={14} /> {uploading ? "Uploading…" : "Upload PDF"}
+        </button>
+      </div>
+      {error && <div className="mt-2 text-sm text-destructive">{error}</div>}
+      {value && (
+        <a href={value} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-xs text-primary hover:underline">
+          Preview current CV →
+        </a>
+      )}
+    </section>
+  );
+}
+
+
 function CertificateManager() {
   const [certs, setCerts] = useState<Cert[]>([]);
   const [title, setTitle] = useState("");
