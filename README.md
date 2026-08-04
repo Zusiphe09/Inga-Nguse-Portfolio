@@ -1,288 +1,210 @@
-# Inga Nguse Portfolio
+<div align="center">
 
-Create a multi-page professional IT portfolio website for Inga Nguse.
+# Inga Nguse
 
-GENERAL REQUIREMENTS
-- Multi-page website (NOT single scroll)
-- Pages: Home, About, Education, Experience, Projects, Certifications, Contact
-- Each navigation item must open a separate page
-- Keep design modern, clean, minimal, SaaS-style
-- Light background (white/light gray)
-- Primary color: deep blue
-- Font: Inter or Poppins
-- Rounded corners, soft shadows, smooth hover effects
-- Fully responsive for mobile and desktop
+### IT Support Specialist
 
-NAVBAR
-- Sticky navigation bar
-- Left: Inga Nguse
-- Right:
-  Home | About | Education | Experience | Projects | Certifications | Contact
-- Highlight active page with rounded blue background
-- Remove all social/connect icons from navbar
+*Turning technical friction into flow — reliable, secure, human-centered IT support.*
 
-MOBILE NAVIGATION
-- Add hamburger menu
-- Slide-in menu animation
-- Smooth open/close
+[![Portfolio](https://img.shields.io/badge/Portfolio-inga--nguse-1D4ED8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://inga-nguse-portfolio-pro.lovable.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Inga%20Nguse-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/inga-nguse-4902323a5)
+[![GitHub](https://img.shields.io/badge/GitHub-Zusiphe09-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Zusiphe09)
+[![Email](https://img.shields.io/badge/Email-inganguse09@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:inganguse09@gmail.com)
 
---------------------------------------------------
+📍 Port Elizabeth, South Africa
 
-HOME PAGE
+</div>
 
-- Title: Inga Nguse
-- Subtitle: IT Support Specialist
-- Tagline: Turning technical problems into simple solutions
-- Location: Based in Port Elizabeth, South Africa
-- Short professional summary
+---
 
-Buttons:
-- View Portfolio (ONLY button — remove “Get in touch”)
+## 🖼️ Portfolio Preview
 
-RIGHT SIDE:
-- Add provided image
+<div align="center">
 
-SECTION: What I bring to the table
+[![Portfolio Preview](https://placehold.co/1200x630/0F172A/FFFFFF/png?text=Inga+Nguse+%7C+IT+Support+Specialist)](https://inga-nguse-portfolio-pro.lovable.app)
 
-Include 4 cards:
-- Technical expertise
-- Data-driven solutions
-- Security focused
-- Innovation mindset
+🔗 **Live site:** [inga-nguse-portfolio-pro.lovable.app](https://inga-nguse-portfolio-pro.lovable.app)
 
-Add stats:
-- 30+ Certifications
-- 2 Major projects
-- 2 Diplomas
-- 5+ Years learning
+</div>
 
-Call to action:
-"Ready to collaborate? Let’s discuss how I can help solve your IT challenges."
-Button: Start a conversation
+---
 
-REMOVE:
-- Featured projects section
+## 👋 About Me
 
---------------------------------------------------
+IT Support Specialist with a strong foundation in information technology and a passion for solving complex technical challenges. Based in Port Elizabeth, South Africa, I combine a solid academic background with hands-on experience to deliver reliable, user-focused technical support and innovative solutions.
 
-ABOUT PAGE
+My journey in IT began with a curiosity about how technology works and has evolved into a dedicated career focused on providing exceptional technical support and innovative solutions. With a Diploma and Advanced Diploma in Information Technology from Nelson Mandela University, I have built a solid academic foundation that complements my practical experience. My approach to IT support is centered on understanding user needs, communicating technical concepts clearly, and delivering solutions that enhance productivity and user satisfaction.
 
-Layout:
-- Left: text
-- Right: image
+Beyond technical skills, I believe in the power of continuous learning and staying current with emerging technologies — reflected in my certifications from leading providers including Google, IBM, AWS, and DeepLearning.AI.
 
-Add Personal Background (use full provided paragraph)
+| | |
+| :-- | :-- |
+| 👁️ **Vision** | To become a trusted IT leader who designs systems that empower people and organizations to do their best work. |
+| 🎯 **Mission** | Deliver reliable, secure, and human-centered technical support that turns friction into flow. |
+| 🧭 **Career Goals** | Grow into senior IT and cloud roles, specializing in service management, security, and automation. |
 
-Add 3 cards:
-- Vision
-- Mission
-- Career Goals
+> *"Technology should empower, not frustrate. Every technical challenge is an opportunity to learn, improve, and deliver better solutions — for the people using the system today, and the team maintaining it tomorrow."*
 
-BOTTOM:
-Professional philosophy:
-"Technology should empower, not frustrate. Every technical challenge is an opportunity to learn, improve, and deliver better solutions..."
+---
 
---------------------------------------------------
+## 🛠️ Technical Skills
 
-EDUCATION PAGE
+| Category | Skills |
+| :-- | :-- |
+| **IT Support & Operations** | Technical Support, Troubleshooting, Service Management, IT Service Management, Documentation |
+| **Systems & Infrastructure** | Systems Administration, Operating Systems, Networking Fundamentals, Cloud Computing, Cloud Technologies |
+| **Data & Development** | Software Development, Database Management, Data Analysis, SQL Server, T-SQL, DAX, Power BI, Data Modeling |
+| **Security** | Information Security, Security Monitoring |
+| **Project & Professional** | IT Project Management, Quality Control, Coordination, Time Management, Communication, Teamwork, Attention to Detail |
 
-Timeline layout:
-- Left: year + icon
-- Right: details
+**Project stacks used:**
 
-Entries:
-- 2022–2024 – Diploma in IT (Support Services)
-- 2025 – Advanced Diploma in IT
-Institution: Nelson Mandela University
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![AI/ML](https://img.shields.io/badge/AI%2FML-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 
-REMOVE achievements section
+---
 
-BOTTOM SECTION:
-Skills acquired through education
+## 🚀 Featured Projects
 
---------------------------------------------------
+### 1. IT Monitoring System ![Status](https://img.shields.io/badge/status-Completed-1D4ED8?style=flat-square)
 
-EXPERIENCE PAGE
+Comprehensive SQL Server and Power BI solution for real-time IT infrastructure monitoring and reporting.
 
-Use timeline layout (same as education)
+- **Role:** Database Developer & BI Analyst
+- **Technologies:** SQL Server · Power BI · T-SQL · DAX · Data Modeling
+- **Repository:** [github.com/Zusiphe09](https://github.com/Zusiphe09)
+- **Live demo:** _Not available_
 
-Entries:
+<details>
+<summary><strong>Key outcomes</strong></summary>
 
-CAPACITI — Present
-- IT training and professional development
-- Systems administration
-- Real-world IT projects
-- Cloud technologies
-- IT service management
+- Real-time system performance monitoring with automated alerts
+- Incident tracking and resolution time analysis
+- SLA compliance reporting with visual dashboards
+- Security monitoring and threat detection metrics
+- Interactive dashboards for stakeholder reporting
+- Reduced incident response time by 37% through proactive monitoring
 
-Examination Assistant (Dec 2024 – Dec 2025)
-Gill College Marking Centre
-- Technical and administrative support
-- Documentation and quality control
-- Examination coordination
+</details>
 
-Add skills:
-- Technical
-- Organizational
-- Professional
+---
 
---------------------------------------------------
+### 2. AfriNexus Helpdesk System ![Status](https://img.shields.io/badge/status-In%20Progress-64748B?style=flat-square)
 
-PROJECTS PAGE
+AI-powered workplace ticketing platform designed to streamline IT support operations with intelligent automation and predictive analytics.
 
-2-column responsive grid
+- **Role:** Lead Developer & System Architect
+- **Technologies:** React · Node.js · AI/ML · Database Design · API Development
+- **Repository:** [github.com/Zusiphe09](https://github.com/Zusiphe09)
+- **Live demo:** [persona-powered-biz.lovable.app](https://persona-powered-biz.lovable.app/auth)
 
-Project 1:
-IT Monitoring System (Completed)
+<details>
+<summary><strong>Key outcomes</strong></summary>
 
-Project 2:
-AfriNexus Helpdesk System (In Progress)
+- Automated ticket prioritization using machine learning algorithms
+- Intelligent routing based on technician expertise and workload
+- Predictive insights for proactive issue resolution
+- Self-service knowledge base with AI-powered search
+- Real-time analytics and performance metrics
+- Integration with existing IT infrastructure
 
-Add link:
-https://persona-powered-biz.lovable.app/auth
-(open in new tab)
+</details>
 
-Card design:
-- Rounded corners
-- Soft shadow
-- Status badge (top right)
-- Tech stack tags
+**How I build:** `01 Understand` → map the real problem with the people who'll use the system · `02 Build` → iterate in small, secure, observable slices · `03 Refine` → measure in the field, polish friction, document for the next person.
 
-BOTTOM:
-Project approach section
+---
 
---------------------------------------------------
+## 📜 Certifications
 
-CERTIFICATIONS PAGE
+Certifications from leading technology providers including **Google**, **IBM**, **AWS**, and **DeepLearning.AI**.
 
-Group certifications by provider
+| Focus area | Certifications |
+| :-- | :--: |
+| IT Support | 8 |
+| Software Development | 12 |
+| Data & AI | 6 |
+| Project Management | 4 |
 
-Each certification must:
-- Have title
-- Have “View Certificate” button
-- Open in new tab
+📄 Full, verifiable certificate list: [Certifications page](https://inga-nguse-portfolio-pro.lovable.app/certifications)
 
-REMOVE:
-- "Available on request"
+---
 
-BOTTOM:
-Certification focus areas:
-- 8 IT Support
-- 12 Software Development
-- 6 Data & AI
-- 4 Project Management
+## 🎓 Education
 
---------------------------------------------------
+| Year | Qualification | Institution |
+| :-- | :-- | :-- |
+| **2025** | Advanced Diploma in Information Technology | Nelson Mandela University |
+| **2022 – 2024** | Diploma in IT (Support Services) | Nelson Mandela University |
 
-CONTACT PAGE
+**Skills acquired:** Technical Support · Systems Administration · Networking Fundamentals · Operating Systems · Software Development · Database Management · IT Project Management · Cloud Computing · Information Security · Data Analysis · Service Management · Documentation
 
-2-column layout
+---
 
-LEFT:
-- Phone: 081 0049 960
-- Email: inganguse09@gmail.com
-- LinkedIn (make it a BUTTON)
-- Availability message
+## 💼 Experience
 
-RIGHT:
-Form:
-- Name
-- Email
-- Message
-- Submit button
+### CAPACITI Candidate — CAPACITI · *Present*
 
-IMPORTANT:
-Form must send messages directly to:
-inganguse09@gmail.com
+- Participating in intensive IT training and professional development program
+- Gaining hands-on experience in enterprise IT support and systems administration
+- Collaborating with industry professionals on real-world IT projects
+- Developing skills in modern IT infrastructure and cloud technologies
+- Building expertise in IT service management and best practices
 
---------------------------------------------------
+### Examination Assistant — Gill College Marking Centre · *Dec 2024 – Dec 2025*
 
-FOOTER
+- Provided technical and administrative support during examination periods
+- Managed examination materials and ensured secure handling of documents
+- Assisted in coordinating examination logistics and scheduling
+- Maintained accurate records and documentation
+- Supported quality assurance processes for examination administration
+- Demonstrated attention to detail and ability to work under pressure
 
-- Navigation links
-- Contact details
-- GitHub link:
-https://github.com/Zusiphe09
+---
 
-Ensure GitHub link opens correctly
+## 📊 GitHub Statistics
 
---------------------------------------------------
+<div align="center">
 
-ADMIN SYSTEM (SECURE)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Zusiphe09&show_icons=true&hide_border=true&theme=default)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Zusiphe09&layout=compact&hide_border=true&theme=default)
 
-Create admin login:
+![GitHub Streak](https://streak-stats.demolab.com/?user=Zusiphe09&hide_border=true)
 
-Email: inganguse09@gmail.com
-Password: Olwemihla.2022
+</div>
 
-SECURITY:
-- Admin-only access
-- Protect admin routes
-- Session login
--Password must be securely stored (hashed)
-include a feature to reset password
+---
 
-ADMIN BUTTON:
-- Place at bottom LEFT corner
-- Always visible
-- Small and minimal
-- Opens admin login
+## 📬 Contact
 
-ADMIN FEATURES:
-- Upload certificates (PDF or images)
-- View certificates
-- Edit certificates
-- Delete certificates
+| | |
+| :-- | :-- |
+| 📧 **Email** | [inganguse09@gmail.com](mailto:inganguse09@gmail.com) |
+| 📱 **Phone** | [081 004 9960](tel:0810049960) |
+| 📍 **Location** | Port Elizabeth, South Africa |
+| 🌐 **Portfolio** | [inga-nguse-portfolio-pro.lovable.app](https://inga-nguse-portfolio-pro.lovable.app) |
 
-CERTIFICATE BEHAVIOR:
-- Uploaded certificates must appear on Certifications page
-- Users can view but NOT edit
-- Open in new tab
+---
 
-EXTRA ADMIN FEATURE:
-- Admin can edit the “Location” field
+## 🔗 Social Links
 
---------------------------------------------------
+<div align="center">
 
-FINAL RULES
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/inga-nguse-4902323a5)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Zusiphe09)
+[![Portfolio](https://img.shields.io/badge/Portfolio-1D4ED8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://inga-nguse-portfolio-pro.lovable.app)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:inganguse09@gmail.com)
 
-- Keep design clean and professional
-- No bright or distracting colors
-- No clutter
-- No icons in navbar
-- No gamification
-- Smooth animations only
-- Fully responsive
+</div>
 
-FINAL GOAL
+---
 
-The portfolio must feel:
-- Professional
-- Modern
-- Clean
-- Well-structured
-- Easy to scan
-- High-quality (like a SaaS product)
+<div align="center">
 
-This project was built with [Lovable](https://lovable.dev).
+**Inga Nguse** · IT Support Specialist · Port Elizabeth, South Africa
 
-**Live app**: https://inga-nguse-portfolio-pro.lovable.app
+*Open to IT support, systems, and cloud opportunities.*
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/50fa4c90-da1a-411d-88d9-cc9434ed9f70).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+</div>
