@@ -7,7 +7,7 @@ export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
       { title: "Projects — Inga Nguse" },
-      { name: "description", content: "Selected IT projects by Inga Nguse including monitoring and helpdesk systems." },
+      { name: "description", content: "Selected IT projects by Inga Nguse including monitoring, helpdesk, and AI article analysis systems." },
     ],
   }),
   component: () => (<Layout><Projects /></Layout>),
