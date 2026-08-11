@@ -134,7 +134,7 @@ function Projects() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 self-start rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
               >
-                Visit project <ExternalLink size={14} />
+                {p.linkLabel || "Visit project"} <ExternalLink size={14} />
               </a>
             )}
           </article>
