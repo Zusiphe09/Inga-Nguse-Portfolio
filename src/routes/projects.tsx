@@ -48,7 +48,26 @@ const PROJECTS = [
       "Real-time analytics and performance metrics",
       "Integration with existing IT infrastructure",
     ],
-    link: "https://persona-powered-biz.lovable.app/auth",
+    linkLabel: "Visit project" as string,
+  },
+  {
+    title: "AI Article Analyzer",
+    status: "Completed",
+    statusTone: "completed" as const,
+    icon: Sparkles,
+    desc: "AI-powered web application that analyzes article sentiment and generates detailed summaries. Users paste article content and receive sentiment insights alongside AI-generated summaries in a simple, interactive interface.",
+    role: "Developer & ML Integrator",
+    stack: ["Python", "Hugging Face Transformers", "PyTorch", "OpenRouter API", "Gradio", "Requests"],
+    outcomes: [
+      "Sentiment analysis with positive and negative classification",
+      "AI-powered article summarization via OpenRouter",
+      "Full Analysis mode combining sentiment and summary",
+      "Interactive user interface built with Gradio",
+      "Secure API key management using environment variables",
+      "Live web deployment accessible through any browser",
+    ],
+    link: "https://article-analyzer-with-hugging-face.onrender.com/",
+    linkLabel: "View Live Demo" as string,
   },
 ];
 
