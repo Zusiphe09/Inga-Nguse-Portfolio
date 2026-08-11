@@ -48,6 +48,7 @@ const PROJECTS = [
       "Real-time analytics and performance metrics",
       "Integration with existing IT infrastructure",
     ],
+    link: "https://persona-powered-biz.lovable.app/auth",
     linkLabel: "Visit project" as string,
   },
   {
