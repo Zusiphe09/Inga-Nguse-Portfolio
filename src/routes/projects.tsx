@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { ExternalLink, Activity, Headset } from "lucide-react";
+import { ExternalLink, Activity, Headset, Sparkles } from "lucide-react";
+
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
