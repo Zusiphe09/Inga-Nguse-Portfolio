@@ -1,7 +1,6 @@
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Github, Mail, Phone, Linkedin } from "lucide-react";
-import { AdminButton } from "./AdminButton";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -163,8 +162,6 @@ export function Layout({ children }: { children?: React.ReactNode }) {
           </div>
         </div>
       </footer>
-
-      <AdminButton />
     </div>
   );
 }
