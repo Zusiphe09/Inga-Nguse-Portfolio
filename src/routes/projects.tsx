@@ -33,8 +33,8 @@ const PROJECTS = [
   },
   {
     title: "AfriNexus Helpdesk System",
-    status: "In Progress",
-    statusTone: "progress" as const,
+    status: "Completed",
+    statusTone: "completed" as const,
     icon: Headset,
     desc: "AI-powered workplace ticketing platform designed to streamline IT support operations with intelligent automation and predictive analytics.",
     role: "Lead Developer & System Architect",
