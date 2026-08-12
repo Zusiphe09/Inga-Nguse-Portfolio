@@ -25,7 +25,12 @@ export function Layout({ children }: { children?: React.ReactNode }) {
     <div className="min-h-screen flex flex-col bg-background">
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link to="/" className="font-bold text-lg tracking-tight text-foreground">
+          <Link
+            to="/admin"
+            aria-label="Admin login"
+            title="Admin login"
+            className="font-bold text-lg tracking-tight text-foreground hover:text-primary transition-colors"
+          >
             Inga Nguse
           </Link>
           <nav className="hidden lg:flex items-center gap-1">
