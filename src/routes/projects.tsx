@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { ExternalLink, Activity, Headset } from "lucide-react";
+import { ExternalLink, Activity, Headset, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -48,6 +48,24 @@ const PROJECTS = [
       "Integration with existing IT infrastructure",
     ],
     link: "https://persona-powered-biz.lovable.app/auth",
+  },
+  {
+    title: "AI Article Analyzer",
+    status: "Completed",
+    statusTone: "completed" as const,
+    icon: Sparkles,
+    desc: "AI-powered web application that analyzes articles and generates concise, meaningful summaries with sentiment insights.",
+    role: "AI/ML Developer",
+    stack: ["Python", "Hugging Face Transformers", "PyTorch", "OpenRouter API", "Gradio", "Requests"],
+    outcomes: [
+      "Article sentiment analysis with positive/negative classification",
+      "AI-powered article summarization",
+      "Full Analysis mode combining sentiment insights and summaries",
+      "Interactive web interface",
+      "Secure API key management using environment variables",
+      "Web-based deployment",
+    ],
+    link: "https://article-analyzer-with-hugging-face-rqcr3kdkzkmfaakb4xbsza.streamlit.app/",
   },
 ];
 
