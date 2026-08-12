@@ -1,13 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { ExternalLink, Activity, Headset, Sparkles } from "lucide-react";
-
+import { ExternalLink, Activity, Headset } from "lucide-react";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
       { title: "Projects — Inga Nguse" },
-      { name: "description", content: "Selected IT projects by Inga Nguse including monitoring, helpdesk, and AI article analysis systems." },
+      { name: "description", content: "Selected IT projects by Inga Nguse including monitoring and helpdesk systems." },
     ],
   }),
   component: () => (<Layout><Projects /></Layout>),
@@ -49,26 +48,6 @@ const PROJECTS = [
       "Integration with existing IT infrastructure",
     ],
     link: "https://persona-powered-biz.lovable.app/auth",
-    linkLabel: "Visit project" as string,
-  },
-  {
-    title: "AI Article Analyzer",
-    status: "Completed",
-    statusTone: "completed" as const,
-    icon: Sparkles,
-    desc: "AI-powered web application that analyzes article sentiment and generates detailed summaries. Users paste article content and receive sentiment insights alongside AI-generated summaries in a simple, interactive interface.",
-    role: "Developer & ML Integrator",
-    stack: ["Python", "Hugging Face Transformers", "PyTorch", "OpenRouter API", "Gradio", "Requests"],
-    outcomes: [
-      "Sentiment analysis with positive and negative classification",
-      "AI-powered article summarization via OpenRouter",
-      "Full Analysis mode combining sentiment and summary",
-      "Interactive user interface built with Gradio",
-      "Secure API key management using environment variables",
-      "Live web deployment accessible through any browser",
-    ],
-    link: "https://article-analyzer-with-hugging-face.onrender.com/",
-    linkLabel: "View Live Demo" as string,
   },
 ];
 
@@ -135,7 +114,7 @@ function Projects() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 self-start rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
               >
-                {p.linkLabel || "Visit project"} <ExternalLink size={14} />
+                Visit project <ExternalLink size={14} />
               </a>
             )}
           </article>
