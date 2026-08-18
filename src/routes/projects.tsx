@@ -171,16 +171,6 @@ function Projects() {
                     View Live Demo <ExternalLink size={14} />
                   </a>
                 )}
-                {p.github && (
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background text-foreground px-4 py-2 text-sm font-semibold hover:bg-muted transition-colors"
-                  >
-                    GitHub <Github size={14} />
-                  </a>
-                )}
               </div>
             </div>
           </article>
