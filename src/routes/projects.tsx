@@ -68,6 +68,27 @@ const PROJECTS = [
     ],
     link: "https://article-analyzer-with-hugging-face-rqcr3kdkzkmfaakb4xbsza.streamlit.app/",
   },
+  {
+    title: "Heart Disease Risk Predictor",
+    status: "Completed",
+    statusTone: "completed" as const,
+    icon: HeartPulse,
+    desc: "Machine learning-powered web application that predicts a patient's likelihood of developing heart disease based on clinical and health-related information.",
+    role: "Machine Learning Engineer & Data Scientist",
+    stack: ["Python", "Pandas", "NumPy", "Scikit-learn", "Streamlit", "Machine Learning", "Data Visualization", "GitHub"],
+    outcomes: [
+      "Interactive patient health assessment form",
+      "Probability-based heart disease risk scoring",
+      "Low, Moderate, and High risk classification",
+      "Color-coded results for easy interpretation",
+      "Feature importance visualization for explainability",
+      "Model comparison across Logistic Regression, Random Forest, and Gradient Boosting",
+      "Best model achieved 85.2% accuracy (Logistic Regression)",
+    ],
+    link: "https://zusiphe09-heart-disease-risk-predictor-app-aie74f.streamlit.app/",
+    github: "https://github.com/Zusiphe09/Heart-Disease-Risk-Predictor",
+    image: heartDiseaseThumb,
+  },
 ];
 
 
