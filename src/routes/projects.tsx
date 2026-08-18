@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { ExternalLink, Activity, Headset, Sparkles } from "lucide-react";
+import { ExternalLink, Github, Activity, Headset, Sparkles, HeartPulse } from "lucide-react";
+import heartDiseaseThumb from "@/assets/heart-disease-predictor.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
