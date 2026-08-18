@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { ExternalLink, Github, Activity, Headset, Sparkles, HeartPulse } from "lucide-react";
+import { ExternalLink, Activity, Headset, Sparkles, HeartPulse } from "lucide-react";
 import heartDiseaseThumb from "@/assets/heart-disease-predictor.jpg";
 
 export const Route = createFileRoute("/projects")({
@@ -86,7 +86,6 @@ const PROJECTS = [
       "Best model achieved 85.2% accuracy (Logistic Regression)",
     ],
     link: "https://zusiphe09-heart-disease-risk-predictor-app-aie74f.streamlit.app/",
-    github: "https://github.com/Zusiphe09/Heart-Disease-Risk-Predictor",
     image: heartDiseaseThumb,
   },
 ];
@@ -170,16 +169,6 @@ function Projects() {
                     className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
                   >
                     View Live Demo <ExternalLink size={14} />
-                  </a>
-                )}
-                {p.github && (
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background text-foreground px-4 py-2 text-sm font-semibold hover:bg-muted transition-colors"
-                  >
-                    GitHub <Github size={14} />
                   </a>
                 )}
               </div>
