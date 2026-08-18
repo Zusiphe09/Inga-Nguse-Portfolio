@@ -104,7 +104,7 @@ Comprehensive SQL Server and Power BI solution for real-time IT infrastructure m
 <td width="50%" valign="top">
 
 ### 🎧 AfriNexus Helpdesk System
-![In Progress](https://img.shields.io/badge/status-In%20Progress-64748B?style=flat-square)
+![Completed](https://img.shields.io/badge/status-Completed-1D4ED8?style=flat-square)
 
 AI-powered workplace ticketing platform designed to streamline IT support operations with intelligent automation and predictive analytics.
 
@@ -121,6 +121,55 @@ AI-powered workplace ticketing platform designed to streamline IT support operat
 - Integration with existing IT infrastructure
 
 [![Live demo](https://img.shields.io/badge/Live_demo-1D4ED8?style=flat-square&logo=googlechrome&logoColor=white)](https://persona-powered-biz.lovable.app/auth)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### ✨ AI Article Analyzer
+![Completed](https://img.shields.io/badge/status-Completed-1D4ED8?style=flat-square)
+
+AI-powered web application that analyzes articles and generates concise, meaningful summaries with sentiment insights.
+
+**Role:** AI/ML Developer
+
+`Python` `Hugging Face Transformers` `PyTorch` `OpenRouter API` `Gradio` `Requests`
+
+**Key outcomes**
+- Article sentiment analysis with positive/negative classification
+- AI-powered article summarization
+- Full Analysis mode combining sentiment insights and summaries
+- Interactive web interface
+- Secure API key management using environment variables
+- Web-based deployment
+
+[![Live demo](https://img.shields.io/badge/Live_demo-1D4ED8?style=flat-square&logo=googlechrome&logoColor=white)](https://article-analyzer-with-hugging-face-rqcr3kdkzkmfaakb4xbsza.streamlit.app/)
+
+</td>
+<td width="50%" valign="top">
+
+### 🫀 Heart Disease Risk Predictor
+![Completed](https://img.shields.io/badge/status-Completed-1D4ED8?style=flat-square)
+*Machine Learning · Data Science · Healthcare Analytics*
+
+Machine learning-powered web application that predicts a patient's likelihood of developing heart disease based on clinical and health-related information.
+
+**Role:** Machine Learning Engineer & Data Scientist
+
+`Python` `Pandas` `NumPy` `Scikit-learn` `Streamlit` `Machine Learning` `Data Visualization` `GitHub`
+
+**Key outcomes**
+- Interactive patient health assessment form
+- Probability-based heart disease risk scoring
+- Low, Moderate, and High risk classification
+- Color-coded results for easy interpretation
+- Feature importance visualization for explainability
+- Model comparison across Logistic Regression, Random Forest, and Gradient Boosting
+- Best model achieved **85.2% accuracy** (Logistic Regression)
+
+[![Live demo](https://img.shields.io/badge/Live_demo-1D4ED8?style=flat-square&logo=googlechrome&logoColor=white)](https://zusiphe09-heart-disease-risk-predictor-app-aie74f.streamlit.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Zusiphe09/Heart-Disease-Risk-Predictor)
 
 </td>
 </tr>
