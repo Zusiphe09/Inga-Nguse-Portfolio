@@ -102,19 +102,6 @@ function Projects() {
       <div className="mt-12 grid md:grid-cols-2 gap-6">
         {PROJECTS.map((p) => (
           <article key={p.title} className="relative bg-card border border-border rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5 flex flex-col">
-            {p.image && (
-              <div className="relative w-full h-44 overflow-hidden">
-                <img
-                  src={p.image}
-                  alt={`${p.title} thumbnail`}
-                  loading="lazy"
-                  width={1024}
-                  height={768}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
-              </div>
-            )}
             <div className="p-7 flex flex-col flex-1">
               <div className="flex items-start justify-between gap-4">
                 <div className="size-12 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
