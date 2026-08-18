@@ -103,60 +103,87 @@ function Projects() {
 
       <div className="mt-12 grid md:grid-cols-2 gap-6">
         {PROJECTS.map((p) => (
-          <article key={p.title} className="relative bg-card border border-border rounded-2xl p-7 shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5 flex flex-col">
-            <div className="flex items-start justify-between gap-4">
-              <div className="size-12 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
-                <p.icon size={22} />
+          <article key={p.title} className="relative bg-card border border-border rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5 flex flex-col">
+            {p.image && (
+              <div className="relative w-full h-44 overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={`${p.title} thumbnail`}
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
               </div>
-              <span
-                className={
-                  "px-3 py-1 rounded-full text-xs font-semibold " +
-                  (p.statusTone === "completed"
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-accent text-accent-foreground border border-primary/20")
-                }
-              >
-                {p.status}
-              </span>
-            </div>
-            <h2 className="mt-5 text-xl font-semibold text-foreground">{p.title}</h2>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-            <div className="mt-4">
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Role</div>
-              <div className="mt-1 text-sm text-foreground">{p.role}</div>
-            </div>
-            <div className="mt-4">
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Technologies</div>
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {p.stack.map((s) => (
-                  <span key={s} className="inline-flex px-2.5 py-1 rounded-md bg-muted text-foreground/80 text-xs font-medium">
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="mt-4">
-              <div className="text-xs font-semibold uppercase tracking-wider text-primary">Key outcomes</div>
-              <ul className="mt-2 space-y-1.5">
-                {p.outcomes.map((o) => (
-                  <li key={o} className="flex gap-2.5 text-sm text-muted-foreground">
-                    <span className="mt-2 size-1.5 rounded-full bg-primary flex-none" />
-                    <span>{o}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {p.link && (
-              <a
-                href={p.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 self-start rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
-              >
-                Visit project <ExternalLink size={14} />
-              </a>
             )}
+            <div className="p-7 flex flex-col flex-1">
+              <div className="flex items-start justify-between gap-4">
+                <div className="size-12 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
+                  <p.icon size={22} />
+                </div>
+                <span
+                  className={
+                    "px-3 py-1 rounded-full text-xs font-semibold " +
+                    (p.statusTone === "completed"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-accent text-accent-foreground border border-primary/20")
+                  }
+                >
+                  {p.status}
+                </span>
+              </div>
+              <h2 className="mt-5 text-xl font-semibold text-foreground">{p.title}</h2>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+              <div className="mt-4">
+                <div className="text-xs font-semibold uppercase tracking-wider text-primary">Role</div>
+                <div className="mt-1 text-sm text-foreground">{p.role}</div>
+              </div>
+              <div className="mt-4">
+                <div className="text-xs font-semibold uppercase tracking-wider text-primary">Technologies</div>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {p.stack.map((s) => (
+                    <span key={s} className="inline-flex px-2.5 py-1 rounded-md bg-muted text-foreground/80 text-xs font-medium">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="mt-4">
+                <div className="text-xs font-semibold uppercase tracking-wider text-primary">Key outcomes</div>
+                <ul className="mt-2 space-y-1.5">
+                  {p.outcomes.map((o) => (
+                    <li key={o} className="flex gap-2.5 text-sm text-muted-foreground">
+                      <span className="mt-2 size-1.5 rounded-full bg-primary flex-none" />
+                      <span>{o}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                {p.link && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    View Live Demo <ExternalLink size={14} />
+                  </a>
+                )}
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background text-foreground px-4 py-2 text-sm font-semibold hover:bg-muted transition-colors"
+                  >
+                    GitHub <Github size={14} />
+                  </a>
+                )}
+              </div>
+            </div>
           </article>
         ))}
       </div>
