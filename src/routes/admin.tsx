@@ -202,6 +202,9 @@ function CertificateManager() {
   const [certs, setCerts] = useState<Cert[]>([]);
   const [title, setTitle] = useState("");
   const [provider, setProvider] = useState("");
+  const [category, setCategory] = useState<string>("Professional Development");
+  const [issuedOn, setIssuedOn] = useState("");
+
   const [file, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
