@@ -227,10 +227,12 @@ function CertificateManager() {
     const { data: pub } = supabase.storage.from("certificates").getPublicUrl(path);
     const { error: insErr } = await supabase.from("certificates").insert({
       title: title.trim(), provider: provider.trim(), file_url: pub.publicUrl, file_path: path,
+      category, issued_on: issuedOn || null,
     });
     setUploading(false);
     if (insErr) { setError(insErr.message); return; }
-    setTitle(""); setProvider(""); setFile(null);
+    setTitle(""); setProvider(""); setFile(null); setIssuedOn("");
+
     (document.getElementById("cert-file") as HTMLInputElement | null)?.value && ((document.getElementById("cert-file") as HTMLInputElement).value = "");
     refresh();
   }
