@@ -97,9 +97,11 @@
   }
   html {
     font-family: var(--font-sans);
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);

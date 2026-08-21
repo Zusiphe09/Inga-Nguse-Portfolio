@@ -34,8 +34,9 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-20 lg:pt-20 lg:pb-28 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 lg:pt-24 lg:pb-32 grid lg:grid-cols-[3fr_2fr] gap-14 lg:gap-20 items-center">
+        <div className="min-w-0">
+
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-soft text-primary text-xs font-medium mb-6">
             <MapPin size={12} /> Based in {location}
           </div>
@@ -80,12 +81,13 @@ function Home() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary-soft to-transparent -z-10" />
-          <div className="relative rounded-3xl overflow-hidden shadow-elevated bg-card aspect-[4/5] max-w-md mx-auto">
+        <div className="relative order-first lg:order-none">
+          <div className="absolute -inset-4 rounded-[2.25rem] bg-gradient-to-br from-primary-soft to-transparent -z-10" />
+          <div className="relative rounded-3xl overflow-hidden border border-border shadow-elevated bg-card aspect-[4/5] w-full max-w-sm sm:max-w-md mx-auto">
             <img src={portrait.url} alt="Inga Nguse — IT Support Specialist" className="h-full w-full object-cover" />
           </div>
         </div>
+
       </section>
 
       {/* What I bring */}
