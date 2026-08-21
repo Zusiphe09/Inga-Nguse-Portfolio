@@ -269,6 +269,19 @@ function CertificateManager() {
           value={provider} onChange={(e) => setProvider(e.target.value)}
           className="rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
         />
+        <select
+          value={category} onChange={(e) => setCategory(e.target.value)}
+          aria-label="Category"
+          className="rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
+        >
+          {CERT_CATEGORIES.map((k) => <option key={k} value={k}>{k}</option>)}
+        </select>
+        <input
+          type="date"
+          value={issuedOn} onChange={(e) => setIssuedOn(e.target.value)}
+          aria-label="Completion date"
+          className="rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
+        />
         <input
           id="cert-file"
           type="file"
@@ -277,6 +290,7 @@ function CertificateManager() {
           className="sm:col-span-2 rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
         />
         {error && <div className="sm:col-span-2 text-sm text-destructive">{error}</div>}
+
         <button
           type="submit" disabled={uploading}
           className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
