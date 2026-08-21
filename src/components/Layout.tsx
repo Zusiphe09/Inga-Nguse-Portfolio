@@ -23,27 +23,28 @@ export function Layout({ children }: { children?: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 grid grid-cols-[minmax(0,1fr)_auto] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3">
           <Link
             to="/admin"
             aria-label="Admin login"
             title="Admin login"
-            className="font-bold text-lg tracking-tight text-foreground hover:text-primary transition-colors"
+            className="min-w-0 truncate font-bold text-lg tracking-tight text-foreground hover:text-primary transition-colors"
           >
             Inga Nguse
           </Link>
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden md:flex items-center justify-center gap-0.5 lg:gap-1">
             {NAV.map((item) => {
               const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
               return (
                 <Link
                   key={item.to}
                   to={item.to}
+                  aria-current={active ? "page" : undefined}
                   className={
-                    "px-4 py-2 rounded-full text-sm font-medium transition-colors " +
+                    "relative px-3 lg:px-4 py-2 rounded-full text-[13px] lg:text-sm font-medium transition-all duration-200 " +
                     (active
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted")
+                      ? "bg-primary text-primary-foreground shadow-soft"
+                      : "text-muted-foreground hover:text-primary hover:bg-primary-soft")
                   }
                 >
                   {item.label}
@@ -51,20 +52,23 @@ export function Layout({ children }: { children?: React.ReactNode }) {
               );
             })}
           </nav>
+          <div className="hidden md:block" />
           <button
             onClick={() => setOpen((o) => !o)}
-            className="lg:hidden p-2 rounded-md text-foreground hover:bg-muted"
+            className="md:hidden shrink-0 p-2 rounded-md text-foreground hover:bg-muted"
             aria-label="Toggle menu"
+            aria-expanded={open}
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
         <div
           className={
-            "lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out border-t border-border " +
+            "md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out border-t border-border " +
             (open ? "max-h-[480px] opacity-100" : "max-h-0 opacity-0")
           }
         >
+
           <nav className="px-4 py-3 flex flex-col gap-1 bg-background">
             {NAV.map((item) => {
               const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);

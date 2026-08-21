@@ -10,7 +10,10 @@ export const Route = createFileRoute("/admin")({
   component: () => (<Layout><Admin /></Layout>),
 });
 
-type Cert = { id: string; title: string; provider: string; file_url: string; file_path: string | null; sort_order: number };
+type Cert = { id: string; title: string; provider: string; file_url: string; file_path: string | null; sort_order: number; category: string | null; issued_on: string | null };
+
+const CERT_CATEGORIES = ["AI Bootcamp", "YES", "Professional Development", "Service Operations Practitioner"] as const;
+
 type Msg = { id: string; name: string; email: string; message: string; read: boolean; created_at: string };
 
 function Admin() {
@@ -199,6 +202,9 @@ function CertificateManager() {
   const [certs, setCerts] = useState<Cert[]>([]);
   const [title, setTitle] = useState("");
   const [provider, setProvider] = useState("");
+  const [category, setCategory] = useState<string>("Professional Development");
+  const [issuedOn, setIssuedOn] = useState("");
+
   const [file, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -221,10 +227,12 @@ function CertificateManager() {
     const { data: pub } = supabase.storage.from("certificates").getPublicUrl(path);
     const { error: insErr } = await supabase.from("certificates").insert({
       title: title.trim(), provider: provider.trim(), file_url: pub.publicUrl, file_path: path,
+      category, issued_on: issuedOn || null,
     });
     setUploading(false);
     if (insErr) { setError(insErr.message); return; }
-    setTitle(""); setProvider(""); setFile(null);
+    setTitle(""); setProvider(""); setFile(null); setIssuedOn("");
+
     (document.getElementById("cert-file") as HTMLInputElement | null)?.value && ((document.getElementById("cert-file") as HTMLInputElement).value = "");
     refresh();
   }
@@ -240,7 +248,9 @@ function CertificateManager() {
     if (!editing) return;
     await supabase.from("certificates").update({
       title: editing.title, provider: editing.provider,
+      category: editing.category, issued_on: editing.issued_on || null,
     }).eq("id", editing.id);
+
     setEditing(null);
     refresh();
   }
@@ -259,6 +269,19 @@ function CertificateManager() {
           value={provider} onChange={(e) => setProvider(e.target.value)}
           className="rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
         />
+        <select
+          value={category} onChange={(e) => setCategory(e.target.value)}
+          aria-label="Category"
+          className="rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
+        >
+          {CERT_CATEGORIES.map((k) => <option key={k} value={k}>{k}</option>)}
+        </select>
+        <input
+          type="date"
+          value={issuedOn} onChange={(e) => setIssuedOn(e.target.value)}
+          aria-label="Completion date"
+          className="rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
+        />
         <input
           id="cert-file"
           type="file"
@@ -267,6 +290,7 @@ function CertificateManager() {
           className="sm:col-span-2 rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm"
         />
         {error && <div className="sm:col-span-2 text-sm text-destructive">{error}</div>}
+
         <button
           type="submit" disabled={uploading}
           className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold disabled:opacity-60"

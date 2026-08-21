@@ -16,30 +16,36 @@ export type Database = {
     Tables: {
       certificates: {
         Row: {
+          category: string
           created_at: string
           file_path: string | null
           file_url: string
           id: string
+          issued_on: string | null
           provider: string
           sort_order: number
           title: string
           updated_at: string
         }
         Insert: {
+          category?: string
           created_at?: string
           file_path?: string | null
           file_url: string
           id?: string
+          issued_on?: string | null
           provider: string
           sort_order?: number
           title: string
           updated_at?: string
         }
         Update: {
+          category?: string
           created_at?: string
           file_path?: string | null
           file_url?: string
           id?: string
+          issued_on?: string | null
           provider?: string
           sort_order?: number
           title?: string
