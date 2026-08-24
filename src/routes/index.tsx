@@ -81,10 +81,15 @@ function Home() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-4 rounded-[2.25rem] bg-gradient-to-br from-primary-soft to-transparent -z-10" />
-          <div className="relative rounded-3xl overflow-hidden border border-border shadow-elevated bg-card aspect-[4/5] w-full max-w-sm sm:max-w-md mx-auto">
-            <img src={portrait.url} alt="Inga Nguse — IT Support Specialist" className="h-full w-full object-cover" />
+        <div className="relative w-full">
+          <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-primary-soft to-transparent -z-10" />
+          <div className="relative rounded-3xl overflow-hidden border border-border shadow-elevated bg-card aspect-[4/5] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto">
+            <img
+              src={portrait.url}
+              alt="Inga Nguse — IT Support Specialist"
+              className="h-full w-full object-cover"
+              loading="eager"
+            />
           </div>
         </div>
 

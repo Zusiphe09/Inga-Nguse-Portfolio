@@ -12,7 +12,7 @@ export const Route = createFileRoute("/admin")({
 
 type Cert = { id: string; title: string; provider: string; file_url: string; file_path: string | null; sort_order: number; category: string | null; issued_on: string | null };
 
-const CERT_CATEGORIES = ["AI Bootcamp", "YES", "Professional Development", "Service Operations Practitioner"] as const;
+const CERT_CATEGORIES = ["AI Bootcamp", "Professional Development", "YES", "Service Operations Practitioner", "CISCO"] as const;
 
 type Msg = { id: string; name: string; email: string; message: string; read: boolean; created_at: string };
 
