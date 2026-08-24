@@ -248,7 +248,7 @@ function CertificateManager() {
     if (!editing) return;
     await supabase.from("certificates").update({
       title: editing.title, provider: editing.provider,
-      category: editing.category, issued_on: editing.issued_on || null,
+      category: editing.category ?? "Professional Development", issued_on: editing.issued_on || null,
     }).eq("id", editing.id);
 
     setEditing(null);
