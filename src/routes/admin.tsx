@@ -307,6 +307,21 @@ function CertificateManager() {
               <div className="flex-1 grid sm:grid-cols-2 gap-2">
                 <input value={editing.title} onChange={(e) => setEditing({ ...editing, title: e.target.value })} className="rounded border border-input bg-background px-2 py-1.5 text-sm" />
                 <input value={editing.provider} onChange={(e) => setEditing({ ...editing, provider: e.target.value })} className="rounded border border-input bg-background px-2 py-1.5 text-sm" />
+                <select
+                  value={editing.category ?? "Professional Development"}
+                  onChange={(e) => setEditing({ ...editing, category: e.target.value })}
+                  aria-label="Category"
+                  className="rounded border border-input bg-background px-2 py-1.5 text-sm"
+                >
+                  {CERT_CATEGORIES.map((k) => <option key={k} value={k}>{k}</option>)}
+                </select>
+                <input
+                  type="date"
+                  value={editing.issued_on ?? ""}
+                  onChange={(e) => setEditing({ ...editing, issued_on: e.target.value })}
+                  aria-label="Completion date"
+                  className="rounded border border-input bg-background px-2 py-1.5 text-sm"
+                />
               </div>
             ) : (
               <div className="min-w-0">
