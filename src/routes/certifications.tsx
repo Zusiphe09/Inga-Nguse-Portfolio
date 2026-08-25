@@ -25,9 +25,9 @@ export const Route = createFileRoute("/certifications")({
   head: () => ({
     meta: [
       { title: "Certifications — Inga Nguse" },
-      { name: "description", content: "Certifications earned by Inga Nguse across AI, professional development, service operations, CISCO networking and the YES programme." },
+      { name: "description", content: "Certifications earned by Inga Nguse across AI, Google AI Essentials, professional development, service operations, CISCO networking and the YES programme." },
       { property: "og:title", content: "Certifications — Inga Nguse" },
-      { property: "og:description", content: "Browse certificates by folder: AI Bootcamp, Professional Development, YES, Service Operations Practitioner and CISCO." },
+      { property: "og:description", content: "Browse certificates by folder: AI Bootcamp, Google AI Essentials, Professional Development, YES, Service Operations Practitioner and CISCO." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -47,6 +47,7 @@ type Cert = {
 
 const CATEGORIES = [
   { name: "AI Bootcamp", icon: Brain, desc: "Artificial intelligence, machine learning and data skills." },
+  { name: "Google AI Essentials", icon: Sparkles, desc: "Google AI fundamentals, prompt engineering and responsible AI practices." },
   { name: "Professional Development", icon: GraduationCap, desc: "Communication, productivity and workplace skills." },
   { name: "YES", icon: Briefcase, desc: "Youth Employment Service programme credentials." },
   { name: "Service Operations Practitioner", icon: Headset, desc: "IT support and service operations." },
@@ -341,7 +342,7 @@ function Certifications() {
 
       <div className="mt-20">
         <h2 className="text-2xl font-bold text-foreground">Certification focus areas</h2>
-        <div className="mt-6 grid grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="mt-6 grid grid-cols-2 lg:grid-cols-6 gap-5">
           {CATEGORIES.map((cat) => (
             <div key={cat.name} className="bg-card border border-border rounded-2xl p-6 text-center shadow-soft">
               <div className="text-4xl font-bold text-primary">{counts[cat.name] ?? 0}</div>
