@@ -36,7 +36,7 @@ function Home() {
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 lg:pt-24 lg:pb-32">
         <div className="grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
-          <div className="min-w-0 order-2 lg:order-1">
+          <div className="min-w-0">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-soft text-primary text-xs font-medium mb-6">
               <MapPin size={12} /> Based in {location}
             </div>
@@ -80,7 +80,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="relative w-full order-1 lg:order-2">
+          <div className="relative w-full">
             <div className="absolute -inset-3 sm:-inset-5 rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-primary-soft via-primary-soft/50 to-transparent -z-10" />
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-border shadow-elevated bg-card aspect-[4/5] w-full">
               <img
