@@ -34,65 +34,64 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 lg:pt-24 lg:pb-32 grid lg:grid-cols-[3fr_2fr] gap-14 lg:gap-20 items-center">
-        <div className="min-w-0">
-
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-soft text-primary text-xs font-medium mb-6">
-            <MapPin size={12} /> Based in {location}
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05]">
-            Inga Nguse
-          </h1>
-          <p className="mt-3 text-xl sm:text-2xl font-semibold text-primary">IT Support Specialist</p>
-          <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
-            IT Support Specialist with a strong foundation in information technology and a
-            passion for solving complex technical challenges. Based in Port Elizabeth, South
-            Africa, I combine a solid academic background with hands-on experience to deliver
-            reliable, user-focused technical support and innovative solutions.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold shadow-soft hover:opacity-95 transition-all hover:-translate-y-0.5"
-            >
-              View Portfolio <ArrowRight size={16} />
-            </Link>
-            {cvUrl && (
-              <button
-                type="button"
-                onClick={async () => {
-                  if (cvUrl.startsWith("/")) {
-                    window.open(cvUrl, "_blank", "noopener,noreferrer");
-                    return;
-                  }
-                  if (/^https?:\/\//i.test(cvUrl)) {
-                    window.open(cvUrl, "_blank", "noopener,noreferrer");
-                    return;
-                  }
-                  const { data } = await supabase.storage.from("certificates").createSignedUrl(cvUrl, 3600);
-                  if (data?.signedUrl) window.open(data.signedUrl, "_blank", "noopener,noreferrer");
-                }}
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background text-foreground px-6 py-3 text-sm font-semibold hover:bg-muted transition-colors"
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 lg:pt-24 lg:pb-32">
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
+          <div className="min-w-0 order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-soft text-primary text-xs font-medium mb-6">
+              <MapPin size={12} /> Based in {location}
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05]">
+              Inga Nguse
+            </h1>
+            <p className="mt-3 text-xl sm:text-2xl font-semibold text-primary">IT Support Specialist</p>
+            <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+              IT Support Specialist with a strong foundation in information technology and a
+              passion for solving complex technical challenges. Based in Port Elizabeth, South
+              Africa, I combine a solid academic background with hands-on experience to deliver
+              reliable, user-focused technical support and innovative solutions.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold shadow-soft hover:opacity-95 transition-all hover:-translate-y-0.5"
               >
-                <Download size={16} /> Download CV
-              </button>
-            )}
+                View Portfolio <ArrowRight size={16} />
+              </Link>
+              {cvUrl && (
+                <button
+                  type="button"
+                  onClick={async () => {
+                    if (cvUrl.startsWith("/")) {
+                      window.open(cvUrl, "_blank", "noopener,noreferrer");
+                      return;
+                    }
+                    if (/^https?:\/\//i.test(cvUrl)) {
+                      window.open(cvUrl, "_blank", "noopener,noreferrer");
+                      return;
+                    }
+                    const { data } = await supabase.storage.from("certificates").createSignedUrl(cvUrl, 3600);
+                    if (data?.signedUrl) window.open(data.signedUrl, "_blank", "noopener,noreferrer");
+                  }}
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background text-foreground px-6 py-3 text-sm font-semibold hover:bg-muted transition-colors"
+                >
+                  <Download size={16} /> Download CV
+                </button>
+              )}
+            </div>
+          </div>
 
+          <div className="relative w-full order-1 lg:order-2">
+            <div className="absolute -inset-3 sm:-inset-5 rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-primary-soft via-primary-soft/50 to-transparent -z-10" />
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-border shadow-elevated bg-card aspect-[4/5] w-full">
+              <img
+                src={portrait.url}
+                alt="Inga Nguse — IT Support Specialist"
+                className="h-full w-full object-cover object-[center_25%]"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
-
-        <div className="relative w-full">
-          <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-primary-soft to-transparent -z-10" />
-          <div className="relative rounded-3xl overflow-hidden border border-border shadow-elevated bg-card aspect-[4/5] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto">
-            <img
-              src={portrait.url}
-              alt="Inga Nguse — IT Support Specialist"
-              className="h-full w-full object-cover"
-              loading="eager"
-            />
-          </div>
-        </div>
-
       </section>
 
       {/* What I bring */}
