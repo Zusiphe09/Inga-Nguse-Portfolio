@@ -21,7 +21,7 @@ function About() {
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">A bit about me</h1>
       </div>
 
-      <div className="mt-12 grid lg:grid-cols-2 gap-12 items-start">
+      <div className="mt-12 lg:mt-16 grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
         <div className="space-y-5 text-muted-foreground leading-relaxed">
           <h2 className="text-2xl font-semibold text-foreground">Personal background</h2>
           <p>
@@ -45,10 +45,15 @@ function About() {
           </p>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary-soft to-transparent -z-10" />
-          <div className="relative rounded-3xl overflow-hidden shadow-elevated bg-card aspect-[4/5] max-w-md mx-auto">
-            <img src={portrait.url} alt="Inga Nguse" className="h-full w-full object-cover" />
+        <div className="relative w-full">
+          <div className="absolute -inset-3 sm:-inset-5 rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-primary-soft via-primary-soft/50 to-transparent -z-10" />
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-border shadow-elevated bg-card aspect-[4/5] w-full">
+            <img
+              src={portrait.url}
+              alt="Inga Nguse"
+              className="h-full w-full object-cover object-[center_25%]"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
