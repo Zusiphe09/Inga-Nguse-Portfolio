@@ -18,6 +18,7 @@ import {
   ZoomIn,
   ZoomOut,
   FileText,
+  Sparkles,
 } from "lucide-react";
 
 export const Route = createFileRoute("/certifications")({
