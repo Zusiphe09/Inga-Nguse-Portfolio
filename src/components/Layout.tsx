@@ -129,7 +129,7 @@ export function Layout({ children }: { children?: React.ReactNode }) {
                 </a>
               </li>
             </ul>
-            <div className="mt-4 flex items-center gap-2 md:justify-end">
+            <div className="mt-4 flex justify-center items-center gap-[20px]">
               <a
                 href="https://www.linkedin.com/in/inga-nguse-4902323a5"
                 target="_blank"
