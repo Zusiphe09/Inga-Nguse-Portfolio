@@ -96,71 +96,74 @@ export function Layout({ children }: { children?: React.ReactNode }) {
       </main>
 
       <footer className="border-t border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid gap-10 md:grid-cols-3">
-          <div>
-            <div className="font-bold text-lg text-foreground">Inga Nguse</div>
-            <p className="mt-2 text-sm text-muted-foreground max-w-xs">
-              IT Support Specialist turning technical problems into simple solutions.
-            </p>
-          </div>
-          <div>
-            <div className="font-semibold text-sm text-foreground mb-3">Navigate</div>
-            <ul className="space-y-2">
-              {NAV.map((item) => (
-                <li key={item.to}>
-                  <Link to={item.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {item.label}
-                  </Link>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 items-start">
+            <div className="md:pt-0">
+              <div className="font-bold text-lg text-foreground">Inga Nguse</div>
+              <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground max-w-xs">
+                IT Support Specialist turning technical problems into simple solutions.
+              </p>
+            </div>
+
+            <div>
+              <div className="font-semibold text-sm text-foreground uppercase tracking-wider mb-4">Navigate</div>
+              <ul className="space-y-2.5">
+                {NAV.map((item) => (
+                  <li key={item.to}>
+                    <Link to={item.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <div className="font-semibold text-sm text-foreground uppercase tracking-wider mb-4">Contact</div>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li>
+                  <a href="tel:+27810049960" className="inline-flex items-center gap-2.5 hover:text-primary transition-colors">
+                    <Phone size={16} /> 081 0049 960
+                  </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <div className="font-semibold text-sm text-foreground mb-3">Contact</div>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="tel:+27810049960" className="inline-flex items-center gap-2 hover:text-primary transition-colors">
-                  <Phone size={14} /> 081 0049 960
+                <li>
+                  <a href="mailto:inganguse09@gmail.com" className="inline-flex items-center gap-2.5 hover:text-primary transition-colors break-all">
+                    <Mail size={16} /> inganguse09@gmail.com
+                  </a>
+                </li>
+              </ul>
+              <div className="mt-5 flex justify-center items-center gap-5">
+                <a
+                  href="https://www.linkedin.com/in/inga-nguse-4902323a5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                >
+                  <Linkedin size={18} />
                 </a>
-              </li>
-              <li>
-                <a href="mailto:inganguse09@gmail.com" className="inline-flex items-center gap-2 hover:text-primary transition-colors">
-                  <Mail size={14} /> inganguse09@gmail.com
+                <a
+                  href="https://github.com/Zusiphe09"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                >
+                  <Github size={18} />
                 </a>
-              </li>
-            </ul>
-            <div className="mt-4 flex justify-center items-center gap-[20px]">
-              <a
-                href="https://www.linkedin.com/in/inga-nguse-4902323a5"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-              >
-                <Linkedin size={16} />
-              </a>
-              <a
-                href="https://github.com/Zusiphe09"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-              >
-                <Github size={16} />
-              </a>
-              <a
-                href="mailto:inganguse09@gmail.com"
-                aria-label="Email"
-                className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-              >
-                <Mail size={16} />
-              </a>
+                <a
+                  href="mailto:inganguse09@gmail.com"
+                  aria-label="Email"
+                  className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                >
+                  <Mail size={18} />
+                </a>
+              </div>
             </div>
           </div>
-
         </div>
         <div className="border-t border-border">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-muted-foreground flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-center sm:text-left">
             <span>© {new Date().getFullYear()} Inga Nguse. All rights reserved.</span>
             <span>Built with care.</span>
           </div>
