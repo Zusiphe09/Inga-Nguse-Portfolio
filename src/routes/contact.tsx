@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { Phone, Mail, Linkedin, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, Linkedin, Github, CheckCircle2 } from "lucide-react";
 import { z } from "zod";
 
 export const Route = createFileRoute("/contact")({
@@ -56,46 +56,71 @@ function Contact() {
         </p>
       </div>
 
-      <div className="mt-12 grid lg:grid-cols-2 gap-10">
-        <div className="space-y-5">
-          <div className="bg-card border border-border rounded-2xl p-6 shadow-soft flex items-start gap-4">
-            <div className="size-11 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
-              <Phone size={20} />
-            </div>
-            <div>
-              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Phone</div>
-              <a href="tel:+27810049960" className="mt-0.5 block font-semibold text-foreground hover:text-primary transition-colors">
-                081 0049 960
+      <div className="mt-12 grid lg:grid-cols-2 gap-10 items-start">
+        <div className="space-y-6">
+          <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-soft">
+            <div className="space-y-5">
+              <a
+                href="tel:+27810049960"
+                className="flex items-center gap-4 group"
+              >
+                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
+                  <Phone size={20} />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Phone</div>
+                  <div className="mt-0.5 font-semibold text-foreground group-hover:text-primary transition-colors break-all">
+                    081 0049 960
+                  </div>
+                </div>
+              </a>
+              <a
+                href="mailto:inganguse09@gmail.com"
+                className="flex items-center gap-4 group"
+              >
+                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
+                  <Mail size={20} />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Email</div>
+                  <div className="mt-0.5 font-semibold text-foreground group-hover:text-primary transition-colors break-all">
+                    inganguse09@gmail.com
+                  </div>
+                </div>
               </a>
             </div>
-          </div>
-          <div className="bg-card border border-border rounded-2xl p-6 shadow-soft flex items-start gap-4">
-            <div className="size-11 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
-              <Mail size={20} />
-            </div>
-            <div>
-              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Email</div>
-              <a href="mailto:inganguse09@gmail.com" className="mt-0.5 block font-semibold text-foreground hover:text-primary transition-colors break-all">
-                inganguse09@gmail.com
-              </a>
-            </div>
-          </div>
-          <a
-            href="https://www.linkedin.com/in/inga-nguse"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block bg-primary text-primary-foreground rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5"
-          >
-            <div className="flex items-center gap-4">
-              <div className="size-11 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
+
+            <div className="my-6 border-t border-border" />
+
+            <div className="flex justify-center items-center gap-5">
+              <a
+                href="https://www.linkedin.com/in/inga-nguse-4902323a5"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
                 <Linkedin size={20} />
-              </div>
-              <div>
-                <div className="text-xs font-semibold opacity-80 uppercase tracking-wider">Connect</div>
-                <div className="mt-0.5 font-semibold">LinkedIn Profile</div>
-              </div>
+              </a>
+              <a
+                href="https://github.com/Zusiphe09"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href="mailto:inganguse09@gmail.com"
+                aria-label="Email"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <Mail size={20} />
+              </a>
             </div>
-          </a>
+          </div>
+
           <div className="rounded-2xl bg-accent border border-primary/15 p-6">
             <div className="text-sm font-semibold text-accent-foreground">Availability</div>
             <p className="mt-1.5 text-sm text-accent-foreground/80">
