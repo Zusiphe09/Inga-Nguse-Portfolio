@@ -21,7 +21,7 @@ function About() {
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">A bit about me</h1>
       </div>
 
-      <div className="mt-12 lg:mt-16 grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
+      <div className="mt-12 lg:mt-16 grid md:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
         <div className="space-y-5 text-muted-foreground leading-relaxed">
           <h2 className="text-2xl font-semibold text-foreground">Personal background</h2>
           <p>
