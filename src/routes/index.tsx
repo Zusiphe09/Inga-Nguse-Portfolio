@@ -35,7 +35,7 @@ function Home() {
     <>
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 lg:pt-24 lg:pb-32">
-        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
+        <div className="grid md:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
           <div className="min-w-0">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-soft text-primary text-xs font-medium mb-6">
               <MapPin size={12} /> Based in {location}
