@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { Phone, Mail, Linkedin, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, Linkedin, Github, CheckCircle2 } from "lucide-react";
 import { z } from "zod";
 
 export const Route = createFileRoute("/contact")({
