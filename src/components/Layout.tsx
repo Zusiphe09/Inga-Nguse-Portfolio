@@ -132,7 +132,7 @@ export function Layout({ children }: { children?: React.ReactNode }) {
                   </a>
                 </li>
               </ul>
-              <div className="mt-5 flex justify-center md:justify-start items-center gap-5">
+              <div className="mt-5 flex justify-center items-center gap-5">
                 <a
                   href="https://www.linkedin.com/in/inga-nguse-4902323a5"
                   target="_blank"
