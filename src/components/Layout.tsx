@@ -95,22 +95,25 @@ export function Layout({ children }: { children?: React.ReactNode }) {
         {children ?? <Outlet />}
       </main>
 
-      <footer className="border-t border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <footer className="bg-footer-background text-footer-foreground">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 items-start">
-            <div className="md:pt-0">
-              <div className="font-bold text-lg text-foreground">Inga Nguse</div>
-              <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground max-w-xs">
+            <div>
+              <div className="font-bold text-xl text-footer-heading tracking-tight">Inga Nguse</div>
+              <p className="mt-3 text-sm leading-relaxed text-footer-foreground/80 max-w-xs">
                 IT Support Specialist turning technical problems into simple solutions.
               </p>
             </div>
 
             <div>
-              <div className="font-semibold text-sm text-foreground uppercase tracking-wider mb-4">Navigate</div>
+              <div className="font-semibold text-sm text-footer-heading uppercase tracking-wider mb-4">Quick Links</div>
               <ul className="space-y-2.5">
                 {NAV.map((item) => (
                   <li key={item.to}>
-                    <Link to={item.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <Link
+                      to={item.to}
+                      className="text-sm text-footer-foreground/80 hover:text-primary transition-colors"
+                    >
                       {item.label}
                     </Link>
                   </li>
@@ -119,51 +122,63 @@ export function Layout({ children }: { children?: React.ReactNode }) {
             </div>
 
             <div>
-              <div className="font-semibold text-sm text-foreground uppercase tracking-wider mb-4">Contact</div>
-              <ul className="space-y-3 text-sm text-muted-foreground">
+              <div className="font-semibold text-sm text-footer-heading uppercase tracking-wider mb-4">Get in Touch</div>
+              <ul className="space-y-3 text-sm text-footer-foreground/80">
                 <li>
-                  <a href="tel:+27810049960" className="inline-flex items-center gap-2.5 hover:text-primary transition-colors">
-                    <Phone size={16} /> 081 0049 960
+                  <a
+                    href="tel:+27810049960"
+                    className="inline-flex items-center gap-3 hover:text-primary transition-colors"
+                  >
+                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-footer-social text-footer-foreground/90">
+                      <Phone size={16} />
+                    </span>
+                    081 0049 960
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:inganguse09@gmail.com" className="inline-flex items-center gap-2.5 hover:text-primary transition-colors break-all">
-                    <Mail size={16} /> inganguse09@gmail.com
+                  <a
+                    href="mailto:inganguse09@gmail.com"
+                    className="inline-flex items-center gap-3 hover:text-primary transition-colors break-all"
+                  >
+                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-footer-social text-footer-foreground/90">
+                      <Mail size={16} />
+                    </span>
+                    inganguse09@gmail.com
                   </a>
                 </li>
               </ul>
-              <div className="mt-4 flex justify-start items-center gap-4">
+              <div className="mt-5 flex items-center gap-3">
                 <a
                   href="https://www.linkedin.com/in/inga-nguse-4902323a5"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  className="inline-flex size-10 items-center justify-center rounded-xl bg-footer-social text-footer-foreground/90 hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-200"
                 >
-                  <Linkedin size={17} />
+                  <Linkedin size={18} />
                 </a>
                 <a
                   href="https://github.com/Zusiphe09"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  className="inline-flex size-10 items-center justify-center rounded-xl bg-footer-social text-footer-foreground/90 hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-200"
                 >
-                  <Github size={17} />
+                  <Github size={18} />
                 </a>
                 <a
                   href="mailto:inganguse09@gmail.com"
                   aria-label="Email"
-                  className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  className="inline-flex size-10 items-center justify-center rounded-xl bg-footer-social text-footer-foreground/90 hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-200"
                 >
-                  <Mail size={17} />
+                  <Mail size={18} />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="border-t border-border">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-muted-foreground flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-center sm:text-left">
+        <div className="border-t border-footer-divider">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-footer-foreground/70 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-center sm:text-left">
             <span>© {new Date().getFullYear()} Inga Nguse. All rights reserved.</span>
             <span>Built with care.</span>
           </div>
