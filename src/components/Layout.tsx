@@ -95,18 +95,18 @@ export function Layout({ children }: { children?: React.ReactNode }) {
         {children ?? <Outlet />}
       </main>
 
-      <footer className="bg-gradient-to-b from-[#E0F2FE] to-[#BFDBFE] text-[#334155] border-t border-blue-200 shadow-soft">
+      <footer className="bg-[#0F172A] text-white border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 items-start">
             <div>
-              <div className="font-bold text-xl text-[#0F172A] tracking-tight">Inga Nguse</div>
-              <p className="mt-3 text-sm leading-relaxed text-[#334155]/90 max-w-xs">
+              <div className="font-bold text-xl tracking-tight">Inga Nguse</div>
+              <p className="mt-3 text-sm leading-relaxed text-slate-300 max-w-xs">
                 IT Support Specialist turning technical problems into simple solutions.
               </p>
             </div>
 
             <div>
-              <div className="font-semibold text-sm text-[#0F172A] uppercase tracking-wider mb-4">Quick Links</div>
+              <div className="font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</div>
               <ul className="space-y-2.5">
                 {[
                   { to: "/about", label: "About" },
@@ -117,7 +117,7 @@ export function Layout({ children }: { children?: React.ReactNode }) {
                   <li key={item.to}>
                     <Link
                       to={item.to}
-                      className="text-sm text-[#334155]/90 hover:text-[#2563EB] transition-colors"
+                      className="text-sm text-slate-300 hover:text-white transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -127,14 +127,14 @@ export function Layout({ children }: { children?: React.ReactNode }) {
             </div>
 
             <div>
-              <div className="font-semibold text-sm text-[#0F172A] uppercase tracking-wider mb-4">Get in Touch</div>
-              <ul className="space-y-3 text-sm text-[#334155]/90">
+              <div className="font-semibold text-sm uppercase tracking-wider mb-4">Get in Touch</div>
+              <ul className="space-y-3 text-sm text-slate-300">
                 <li>
                   <a
                     href="tel:+27810049960"
-                    className="inline-flex items-center gap-3 hover:text-[#2563EB] transition-colors"
+                    className="inline-flex items-center gap-3 hover:text-white transition-colors"
                   >
-                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-white text-[#0F172A] shadow-sm">
+                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-white">
                       <Phone size={16} />
                     </span>
                     081 0049 960
@@ -143,9 +143,9 @@ export function Layout({ children }: { children?: React.ReactNode }) {
                 <li>
                   <a
                     href="mailto:inganguse09@gmail.com"
-                    className="inline-flex items-center gap-3 hover:text-[#2563EB] transition-colors break-all"
+                    className="inline-flex items-center gap-3 hover:text-white transition-colors break-all"
                   >
-                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-white text-[#0F172A] shadow-sm">
+                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-white">
                       <Mail size={16} />
                     </span>
                     inganguse09@gmail.com
@@ -158,7 +158,7 @@ export function Layout({ children }: { children?: React.ReactNode }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="inline-flex size-10 items-center justify-center rounded-full bg-white text-[#0F172A] border border-blue-200 shadow-sm hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] hover:scale-105 transition-all duration-200"
+                  className="inline-flex size-10 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-[#2563EB] hover:scale-105 transition-all duration-200"
                 >
                   <Linkedin size={18} />
                 </a>
@@ -167,14 +167,14 @@ export function Layout({ children }: { children?: React.ReactNode }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className="inline-flex size-10 items-center justify-center rounded-full bg-white text-[#0F172A] border border-blue-200 shadow-sm hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] hover:scale-105 transition-all duration-200"
+                  className="inline-flex size-10 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-[#2563EB] hover:scale-105 transition-all duration-200"
                 >
                   <Github size={18} />
                 </a>
                 <a
                   href="mailto:inganguse09@gmail.com"
                   aria-label="Email"
-                  className="inline-flex size-10 items-center justify-center rounded-full bg-white text-[#0F172A] border border-blue-200 shadow-sm hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] hover:scale-105 transition-all duration-200"
+                  className="inline-flex size-10 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-[#2563EB] hover:scale-105 transition-all duration-200"
                 >
                   <Mail size={18} />
                 </a>
@@ -182,8 +182,8 @@ export function Layout({ children }: { children?: React.ReactNode }) {
             </div>
           </div>
         </div>
-        <div className="border-t border-blue-300/60">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-[#334155]/70 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-center sm:text-left">
+        <div className="border-t border-white/10">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-slate-400 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-center sm:text-left">
             <span>© {new Date().getFullYear()} Inga Nguse. All rights reserved.</span>
             <span>Built with care.</span>
           </div>
