@@ -132,31 +132,31 @@ export function Layout({ children }: { children?: React.ReactNode }) {
                   </a>
                 </li>
               </ul>
-              <div className="mt-5 flex justify-center items-center gap-5">
+              <div className="mt-4 flex justify-start items-center gap-4">
                 <a
                   href="https://www.linkedin.com/in/inga-nguse-4902323a5"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                 >
-                  <Linkedin size={18} />
+                  <Linkedin size={17} />
                 </a>
                 <a
                   href="https://github.com/Zusiphe09"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                 >
-                  <Github size={18} />
+                  <Github size={17} />
                 </a>
                 <a
                   href="mailto:inganguse09@gmail.com"
                   aria-label="Email"
-                  className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                  className="inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                 >
-                  <Mail size={18} />
+                  <Mail size={17} />
                 </a>
               </div>
             </div>
