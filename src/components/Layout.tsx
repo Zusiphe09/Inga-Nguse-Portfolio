@@ -1,6 +1,7 @@
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Github, Mail, Phone, Linkedin } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, Menu, Phone, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -95,30 +96,35 @@ export function Layout({ children }: { children?: React.ReactNode }) {
         {children ?? <Outlet />}
       </main>
 
-      <footer className="bg-[#0F172A] text-white border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 items-start">
-            <div>
-              <div className="font-bold text-xl tracking-tight">Inga Nguse</div>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300 max-w-xs">
-                IT Support Specialist turning technical problems into simple solutions.
-              </p>
-            </div>
+      <footer className="border-y border-footer-divider bg-footer-background text-footer-foreground">
+        <div className="footer-diagonal h-20 sm:h-28 lg:h-36 bg-background" aria-hidden="true" />
 
+        <div className="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20 lg:pt-10">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase text-footer-muted">Interested?</p>
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Let&apos;s Work Together</h2>
+            <p className="mx-auto mt-4 max-w-xl leading-relaxed text-footer-muted">
+              Have an opportunity, project, or technical challenge in mind? I&apos;d love to hear about it.
+            </p>
+            <Button asChild size="lg" className="mt-7 rounded-full bg-footer-foreground px-7 text-footer-background shadow-none hover:bg-footer-accent hover:-translate-y-0.5 focus-visible:ring-footer-foreground">
+              <Link to="/contact">
+                Start a conversation <ArrowUpRight />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-10 border-t border-footer-divider pt-12 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4 lg:gap-12">
             <div>
-              <div className="font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</div>
-              <ul className="space-y-2.5">
+              <h3 className="font-semibold">Navigation</h3>
+              <ul className="mt-5 space-y-3">
                 {[
+                  { to: "/", label: "Home" },
                   { to: "/about", label: "About" },
                   { to: "/education", label: "Education" },
                   { to: "/experience", label: "Experience" },
-                  { to: "/projects", label: "Projects" },
                 ].map((item) => (
                   <li key={item.to}>
-                    <Link
-                      to={item.to}
-                      className="text-sm text-slate-300 hover:text-white transition-colors"
-                    >
+                    <Link to={item.to} className="inline-block text-sm text-footer-foreground transition-transform duration-200 hover:translate-x-1">
                       {item.label}
                     </Link>
                   </li>
@@ -127,63 +133,69 @@ export function Layout({ children }: { children?: React.ReactNode }) {
             </div>
 
             <div>
-              <div className="font-semibold text-sm uppercase tracking-wider mb-4">Get in Touch</div>
-              <ul className="space-y-3 text-sm text-slate-300">
+              <h3 className="font-semibold">Portfolio</h3>
+              <ul className="mt-5 space-y-3">
+                {["IT Monitoring System", "AfriNexus Helpdesk", "AI Article Analyzer", "Heart Disease Predictor"].map((label) => (
+                  <li key={label}>
+                    <Link to="/projects" className="inline-block text-sm text-footer-foreground transition-transform duration-200 hover:translate-x-1">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
                 <li>
-                  <a
-                    href="tel:+27810049960"
-                    className="inline-flex items-center gap-3 hover:text-white transition-colors"
-                  >
-                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-white">
-                      <Phone size={16} />
-                    </span>
+                  <Link to="/certifications" className="inline-block text-sm text-footer-foreground transition-transform duration-200 hover:translate-x-1">
+                    Certifications
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">Contact Information</h3>
+              <ul className="mt-5 space-y-4 text-sm">
+                <li>
+                  <a href="tel:+27810049960" className="group inline-flex items-center gap-3 text-footer-foreground">
+                    <Phone size={18} className="transition-transform duration-200 group-hover:-translate-y-0.5" />
                     081 0049 960
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="mailto:inganguse09@gmail.com"
-                    className="inline-flex items-center gap-3 hover:text-white transition-colors break-all"
-                  >
-                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-white">
-                      <Mail size={16} />
-                    </span>
+                  <a href="mailto:inganguse09@gmail.com" className="group inline-flex items-start gap-3 break-all text-footer-foreground">
+                    <Mail size={18} className="mt-0.5 shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5" />
                     inganguse09@gmail.com
                   </a>
                 </li>
               </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">Social Media</h3>
+              <p className="mt-5 text-sm leading-relaxed text-footer-muted">Connect with me and follow my latest work.</p>
               <div className="mt-5 flex items-center gap-3">
-                <a
-                  href="https://www.linkedin.com/in/inga-nguse-4902323a5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="inline-flex size-10 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-[#2563EB] hover:scale-105 transition-all duration-200"
-                >
-                  <Linkedin size={18} />
-                </a>
-                <a
-                  href="https://github.com/Zusiphe09"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className="inline-flex size-10 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-[#2563EB] hover:scale-105 transition-all duration-200"
-                >
-                  <Github size={18} />
-                </a>
-                <a
-                  href="mailto:inganguse09@gmail.com"
-                  aria-label="Email"
-                  className="inline-flex size-10 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-[#2563EB] hover:scale-105 transition-all duration-200"
-                >
-                  <Mail size={18} />
-                </a>
+                {[
+                  { href: "https://www.linkedin.com/in/inga-nguse-4902323a5", label: "LinkedIn", Icon: Linkedin },
+                  { href: "https://github.com/Zusiphe09", label: "GitHub", Icon: Github },
+                  { href: "mailto:inganguse09@gmail.com", label: "Email", Icon: Mail },
+                ].map(({ href, label, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    aria-label={label}
+                    title={label}
+                    className="inline-flex size-11 items-center justify-center rounded-full border border-footer-foreground text-footer-foreground transition-all duration-200 hover:-translate-y-1 hover:bg-footer-foreground hover:text-footer-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-footer-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-footer-background"
+                  >
+                    <Icon size={18} strokeWidth={1.75} />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
         </div>
-        <div className="border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-slate-400 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-center sm:text-left">
+
+        <div className="border-t border-footer-divider">
+          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-center text-xs text-footer-muted sm:flex-row sm:px-6 sm:text-left lg:px-8">
             <span>© {new Date().getFullYear()} Inga Nguse. All rights reserved.</span>
             <span>Built with care.</span>
           </div>
