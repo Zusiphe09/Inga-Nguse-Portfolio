@@ -1,7 +1,6 @@
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Github, Linkedin, Mail, Menu, Phone, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Menu, Phone, X } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -101,7 +100,7 @@ export function Layout({ children }: { children?: React.ReactNode }) {
 
         <div className="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20 lg:pt-10">
 
-          <div className="mt-16 grid grid-cols-1 gap-10 border-t border-footer-divider pt-12 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4 lg:gap-12">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
             <div>
               <h3 className="font-semibold">Navigation</h3>
               <ul className="mt-5 space-y-3">
