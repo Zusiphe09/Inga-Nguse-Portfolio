@@ -55,13 +55,13 @@ function Reset() {
               />
             </div>
             {error && <div className="text-sm text-destructive">{error}</div>}
-            <button disabled={busy} className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold disabled:opacity-60">
+            <button disabled={busy} className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold transition-colors hover:bg-primary-hover disabled:opacity-60">
               {busy ? "Updating…" : "Update password"}
             </button>
           </form>
         )}
         <div className="mt-6 text-center">
-          <Link to="/auth" className="text-xs text-muted-foreground hover:text-primary">Back to sign in</Link>
+          <Link to="/auth" className="text-xs text-muted-foreground hover:text-highlight">Back to sign in</Link>
         </div>
       </div>
     </div>

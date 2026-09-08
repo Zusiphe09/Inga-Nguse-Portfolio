@@ -49,7 +49,7 @@ function Contact() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div className="max-w-2xl">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">Contact</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Contact</p>
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">Let's talk</h1>
         <p className="mt-4 text-muted-foreground">
           Whether it's a collaboration, an opportunity, or a quick question — I'd love to hear from you.
@@ -64,12 +64,12 @@ function Contact() {
                 href="tel:+27810049960"
                 className="flex items-center gap-4 group"
               >
-                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
+                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-highlight flex items-center justify-center">
                   <Phone size={20} />
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Phone</div>
-                  <div className="mt-0.5 font-semibold text-foreground group-hover:text-primary transition-colors break-all">
+                  <div className="mt-0.5 font-semibold text-foreground group-hover:text-highlight transition-colors break-all">
                     081 0049 960
                   </div>
                 </div>
@@ -78,12 +78,12 @@ function Contact() {
                 href="mailto:inganguse09@gmail.com"
                 className="flex items-center gap-4 group"
               >
-                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
+                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-highlight flex items-center justify-center">
                   <Mail size={20} />
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Email</div>
-                  <div className="mt-0.5 font-semibold text-foreground group-hover:text-primary transition-colors break-all">
+                  <div className="mt-0.5 font-semibold text-foreground group-hover:text-highlight transition-colors break-all">
                     inganguse09@gmail.com
                   </div>
                 </div>
@@ -98,7 +98,7 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-highlight-foreground hover:border-primary transition-colors"
               >
                 <Linkedin size={20} />
               </a>
@@ -107,14 +107,14 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-highlight-foreground hover:border-primary transition-colors"
               >
                 <Github size={20} />
               </a>
               <a
                 href="mailto:inganguse09@gmail.com"
                 aria-label="Email"
-                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-foreground hover:bg-primary hover:text-highlight-foreground hover:border-primary transition-colors"
               >
                 <Mail size={20} />
               </a>
@@ -133,7 +133,7 @@ function Contact() {
         <form onSubmit={onSubmit} className="bg-card border border-border rounded-2xl p-7 shadow-soft space-y-4">
           <h2 className="text-xl font-semibold text-foreground">Send a message</h2>
           {sent && (
-            <div className="rounded-lg bg-primary-soft text-primary p-3 flex items-start gap-2 text-sm">
+            <div className="rounded-lg bg-primary-soft text-highlight p-3 flex items-start gap-2 text-sm">
               <CheckCircle2 size={16} className="mt-0.5 flex-none" />
               <span>Thank you! Your message has been received.</span>
             </div>
@@ -177,7 +177,7 @@ function Contact() {
           <button
             type="submit"
             disabled={sending}
-            className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-95 transition-opacity disabled:opacity-60"
+            className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold shadow-soft hover:bg-primary-hover transition-opacity disabled:opacity-60"
           >
             {sending ? "Sending…" : "Send message"}
           </button>

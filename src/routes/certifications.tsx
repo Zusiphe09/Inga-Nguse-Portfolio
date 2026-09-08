@@ -141,7 +141,7 @@ function Certifications() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div className="max-w-2xl">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">Certifications</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Certifications</p>
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">Continuous learning</h1>
         <p className="mt-4 text-muted-foreground">
           Certificates are organised into folders. Open a folder to browse and preview its credentials.
@@ -164,7 +164,7 @@ function Certifications() {
                 className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 text-left shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-primary-soft opacity-60 transition-transform duration-500 group-hover:scale-125" />
-                <span className="relative grid size-12 place-items-center rounded-xl bg-primary-soft text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <span className="relative grid size-12 place-items-center rounded-xl bg-primary-soft text-highlight transition-colors group-hover:bg-primary group-hover:text-highlight-foreground">
                   <Folder size={22} />
                 </span>
                 <h2 className="relative mt-4 font-semibold text-foreground">{cat.name}</h2>
@@ -173,7 +173,7 @@ function Certifications() {
                   <span className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground">
                     <Icon size={14} /> {count} certificate{count === 1 ? "" : "s"}
                   </span>
-                  <span className="text-xs font-semibold text-primary opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="text-xs font-semibold text-highlight opacity-0 transition-opacity group-hover:opacity-100">
                     Open →
                   </span>
                 </span>
@@ -205,7 +205,7 @@ function Certifications() {
           </div>
 
           <div className="mt-8 flex items-center gap-3">
-            {activeCat ? <activeCat.icon size={20} className="shrink-0 text-primary" /> : null}
+            {activeCat ? <activeCat.icon size={20} className="shrink-0 text-highlight" /> : null}
             <h2 className="min-w-0 truncate text-2xl font-bold text-foreground">{openFolder}</h2>
             <span className="shrink-0 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold text-muted-foreground">
               {folderItems.length}
@@ -226,9 +226,9 @@ function Certifications() {
                 >
                   <div className="grid h-32 place-items-center bg-gradient-to-br from-primary-soft to-muted">
                     {isImage(c.file_path ?? c.file_url) ? (
-                      <Award size={30} className="text-primary" aria-hidden />
+                      <Award size={30} className="text-highlight" aria-hidden />
                     ) : (
-                      <FileText size={30} className="text-primary" aria-hidden />
+                      <FileText size={30} className="text-highlight" aria-hidden />
                     )}
                   </div>
                   <div className="flex flex-1 flex-col p-4">
@@ -242,7 +242,7 @@ function Certifications() {
                         type="button"
                         onClick={() => openPreview(c)}
                         aria-label={`Preview ${c.title}`}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                       >
                         View <ZoomIn size={12} />
                       </button>
@@ -305,7 +305,7 @@ function Certifications() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open or download certificate"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground hover:opacity-90"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground hover:bg-primary-hover"
                 >
                   <ExternalLink size={12} /> Download
                 </a>
@@ -345,7 +345,7 @@ function Certifications() {
         <div className="mt-6 grid grid-cols-2 lg:grid-cols-6 gap-5">
           {CATEGORIES.map((cat) => (
             <div key={cat.name} className="bg-card border border-border rounded-2xl p-6 text-center shadow-soft">
-              <div className="text-4xl font-bold text-primary">{counts[cat.name] ?? 0}</div>
+              <div className="text-4xl font-bold text-highlight">{counts[cat.name] ?? 0}</div>
               <div className="mt-1 text-sm text-muted-foreground">{cat.name}</div>
             </div>
           ))}

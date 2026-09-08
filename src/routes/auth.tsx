@@ -85,11 +85,11 @@ function Auth() {
             </div>
           )}
           {error && <div className="text-sm text-destructive">{error}</div>}
-          {info && <div className="text-sm text-primary">{info}</div>}
+          {info && <div className="text-sm text-highlight">{info}</div>}
           <button
             type="submit"
             disabled={busy}
-            className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold hover:opacity-95 disabled:opacity-60"
+            className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold hover:bg-primary-hover disabled:opacity-60"
           >
             {busy ? "Please wait…" : mode === "signin" ? "Sign in" : mode === "signup" ? "Create account" : "Send reset link"}
           </button>
@@ -97,15 +97,15 @@ function Auth() {
         <div className="mt-5 flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
           {mode === "signin" ? (
             <>
-              <button onClick={() => { setMode("signup"); setError(null); setInfo(null); }} className="hover:text-primary">Create account</button>
-              <button onClick={() => { setMode("forgot"); setError(null); setInfo(null); }} className="hover:text-primary">Forgot password?</button>
+              <button onClick={() => { setMode("signup"); setError(null); setInfo(null); }} className="hover:text-highlight">Create account</button>
+              <button onClick={() => { setMode("forgot"); setError(null); setInfo(null); }} className="hover:text-highlight">Forgot password?</button>
             </>
           ) : (
-            <button onClick={() => { setMode("signin"); setError(null); setInfo(null); }} className="hover:text-primary">← Back to sign in</button>
+            <button onClick={() => { setMode("signin"); setError(null); setInfo(null); }} className="hover:text-highlight">← Back to sign in</button>
           )}
         </div>
         <div className="mt-6 text-center">
-          <Link to="/" className="text-xs text-muted-foreground hover:text-primary">Back to site</Link>
+          <Link to="/" className="text-xs text-muted-foreground hover:text-highlight">Back to site</Link>
         </div>
       </div>
     </div>

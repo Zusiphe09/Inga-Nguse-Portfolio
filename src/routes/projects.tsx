@@ -94,7 +94,7 @@ function Projects() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div className="max-w-2xl">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">Projects</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Projects</p>
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">Selected work</h1>
         <p className="mt-4 text-muted-foreground">Hands-on systems built to solve real operational problems.</p>
       </div>
@@ -104,7 +104,7 @@ function Projects() {
           <article key={p.title} className="relative bg-card border border-border rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-all hover:-translate-y-0.5 flex flex-col">
             <div className="p-7 flex flex-col flex-1">
               <div className="flex items-start justify-between gap-4">
-                <div className="size-12 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
+                <div className="size-12 rounded-xl bg-primary-soft text-highlight flex items-center justify-center">
                   <p.icon size={22} />
                 </div>
                 <span
@@ -121,11 +121,11 @@ function Projects() {
               <h2 className="mt-5 text-xl font-semibold text-foreground">{p.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               <div className="mt-4">
-                <div className="text-xs font-semibold uppercase tracking-wider text-primary">Role</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-highlight">Role</div>
                 <div className="mt-1 text-sm text-foreground">{p.role}</div>
               </div>
               <div className="mt-4">
-                <div className="text-xs font-semibold uppercase tracking-wider text-primary">Technologies</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-highlight">Technologies</div>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {p.stack.map((s) => (
                     <span key={s} className="inline-flex px-2.5 py-1 rounded-md bg-muted text-foreground/80 text-xs font-medium">
@@ -135,7 +135,7 @@ function Projects() {
                 </div>
               </div>
               <div className="mt-4">
-                <div className="text-xs font-semibold uppercase tracking-wider text-primary">Key outcomes</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-highlight">Key outcomes</div>
                 <ul className="mt-2 space-y-1.5">
                   {p.outcomes.map((o) => (
                     <li key={o} className="flex gap-2.5 text-sm text-muted-foreground">
@@ -152,7 +152,7 @@ function Projects() {
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold hover:bg-primary-hover transition-colors"
                   >
                     View Live Demo <ExternalLink size={14} />
                   </a>
@@ -172,7 +172,7 @@ function Projects() {
             { n: "03", t: "Refine", d: "Measure how it actually performs in the field, then polish friction points and document for the next person." },
           ].map((s) => (
             <div key={s.n}>
-              <div className="text-primary font-bold">{s.n}</div>
+              <div className="text-highlight font-bold">{s.n}</div>
               <div className="mt-1 font-semibold text-foreground">{s.t}</div>
               <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
             </div>

@@ -53,7 +53,7 @@ function Experience() {
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div className="max-w-2xl">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">Experience</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Experience</p>
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">Where I've worked</h1>
         <p className="mt-4 text-muted-foreground">A timeline of hands-on roles and responsibilities.</p>
       </div>
@@ -67,11 +67,11 @@ function Experience() {
                 <div className="relative z-10 size-14 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center shadow-soft">
                   <e.icon size={22} />
                 </div>
-                <div className="mt-3 text-xs font-semibold text-primary text-left">{e.period}</div>
+                <div className="mt-3 text-xs font-semibold text-highlight text-left">{e.period}</div>
               </div>
               <div className="bg-card border border-border rounded-2xl p-6 shadow-soft">
                 <h3 className="text-lg font-semibold text-foreground">{e.title}</h3>
-                <p className="mt-0.5 text-sm text-primary font-medium">{e.role}</p>
+                <p className="mt-0.5 text-sm text-highlight font-medium">{e.role}</p>
                 <ul className="mt-4 space-y-2">
                   {e.points.map((p) => (
                     <li key={p} className="flex gap-2.5 text-sm text-muted-foreground">
