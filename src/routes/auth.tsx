@@ -89,7 +89,7 @@ function Auth() {
           <button
             type="submit"
             disabled={busy}
-            className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold hover:opacity-95 disabled:opacity-60"
+            className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold hover:bg-primary-hover disabled:opacity-60"
           >
             {busy ? "Please wait…" : mode === "signin" ? "Sign in" : mode === "signup" ? "Create account" : "Send reset link"}
           </button>

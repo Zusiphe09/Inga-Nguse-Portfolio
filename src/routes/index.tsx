@@ -53,7 +53,7 @@ function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold shadow-soft hover:opacity-95 transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold shadow-soft hover:bg-primary-hover transition-all hover:-translate-y-0.5"
               >
                 View Portfolio <ArrowRight size={16} />
               </Link>
@@ -148,7 +148,7 @@ function Home() {
           </p>
           <Link
             to="/contact"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-background text-foreground px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-background text-foreground px-6 py-3 text-sm font-semibold hover:bg-primary-hover transition-opacity"
           >
             Start a conversation <ArrowRight size={16} />
           </Link>

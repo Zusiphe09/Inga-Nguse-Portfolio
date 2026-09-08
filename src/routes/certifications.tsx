@@ -242,7 +242,7 @@ function Certifications() {
                         type="button"
                         onClick={() => openPreview(c)}
                         aria-label={`Preview ${c.title}`}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                       >
                         View <ZoomIn size={12} />
                       </button>
@@ -305,7 +305,7 @@ function Certifications() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open or download certificate"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground hover:opacity-90"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground hover:bg-primary-hover"
                 >
                   <ExternalLink size={12} /> Download
                 </a>

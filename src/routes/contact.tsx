@@ -177,7 +177,7 @@ function Contact() {
           <button
             type="submit"
             disabled={sending}
-            className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-95 transition-opacity disabled:opacity-60"
+            className="w-full rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold shadow-soft hover:bg-primary-hover transition-opacity disabled:opacity-60"
           >
             {sending ? "Sending…" : "Send message"}
           </button>
