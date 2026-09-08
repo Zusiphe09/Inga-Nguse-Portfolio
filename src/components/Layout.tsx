@@ -1,7 +1,6 @@
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Github, Linkedin, Mail, Menu, Phone, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Menu, Phone, X } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -100,20 +99,8 @@ export function Layout({ children }: { children?: React.ReactNode }) {
         <div className="footer-diagonal h-20 sm:h-28 lg:h-36 bg-background" aria-hidden="true" />
 
         <div className="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20 lg:pt-10">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase text-footer-muted">Interested?</p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Let&apos;s Work Together</h2>
-            <p className="mx-auto mt-4 max-w-xl leading-relaxed text-footer-muted">
-              Have an opportunity, project, or technical challenge in mind? I&apos;d love to hear about it.
-            </p>
-            <Button asChild size="lg" className="mt-7 rounded-full bg-footer-foreground px-7 text-footer-background shadow-none hover:bg-footer-accent hover:-translate-y-0.5 focus-visible:ring-footer-foreground">
-              <Link to="/contact">
-                Start a conversation <ArrowUpRight />
-              </Link>
-            </Button>
-          </div>
 
-          <div className="mt-16 grid grid-cols-1 gap-10 border-t border-footer-divider pt-12 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4 lg:gap-12">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
             <div>
               <h3 className="font-semibold">Navigation</h3>
               <ul className="mt-5 space-y-3">

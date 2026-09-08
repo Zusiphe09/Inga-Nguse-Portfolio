@@ -15,7 +15,7 @@ export function renderErrorPage(): string {
       .primary { background: #303A67; color: #FFFFFF; }
       .primary:hover { background: #252D52; }
       .secondary { background: #FFFFFF; color: #1F2937; border-color: #E5E7EB; }
-      .secondary:hover { color: #4F8EF7; }
+      .secondary:hover { color: #303A67; }
     </style>
   </head>
   <body>
