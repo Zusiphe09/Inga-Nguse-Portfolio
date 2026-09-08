@@ -95,7 +95,7 @@ function Home() {
       </section>
 
       {/* What I bring */}
-      <section className="bg-muted/40 border-y border-border">
+      <section className="bg-muted border-y border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">What I bring to the table</h2>
@@ -148,7 +148,7 @@ function Home() {
           </p>
           <Link
             to="/contact"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-background text-foreground px-6 py-3 text-sm font-semibold hover:bg-primary-hover transition-opacity"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-card text-primary px-6 py-3 text-sm font-semibold hover:bg-muted transition-colors"
           >
             Start a conversation <ArrowRight size={16} />
           </Link>

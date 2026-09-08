@@ -152,7 +152,7 @@ function Projects() {
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:bg-primary-hover transition-opacity"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold hover:bg-primary-hover transition-colors"
                   >
                     View Live Demo <ExternalLink size={14} />
                   </a>

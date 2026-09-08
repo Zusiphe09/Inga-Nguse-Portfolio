@@ -144,4 +144,15 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+
+  a,
+  button {
+    transition-duration: 180ms;
+    transition-timing-function: ease-out;
+  }
+
+  ::selection {
+    background-color: var(--color-highlight);
+    color: var(--color-highlight-foreground);
+  }
 }
