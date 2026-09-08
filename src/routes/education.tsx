@@ -61,11 +61,11 @@ function Education() {
                 <div className="relative z-10 size-14 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center shadow-soft">
                   <GraduationCap size={22} />
                 </div>
-                <div className="mt-3 text-xs font-semibold text-primary">{e.years}</div>
+                <div className="mt-3 text-xs font-semibold text-highlight">{e.years}</div>
               </div>
               <div className="bg-card border border-border rounded-2xl p-6 shadow-soft">
                 <h3 className="text-lg font-semibold text-foreground">{e.title}</h3>
-                <p className="mt-0.5 text-sm text-primary font-medium">{e.institution}</p>
+                <p className="mt-0.5 text-sm text-highlight font-medium">{e.institution}</p>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{e.body}</p>
               </div>
             </li>
@@ -78,7 +78,7 @@ function Education() {
         <p className="mt-2 text-muted-foreground">Core competencies developed across both diplomas.</p>
         <div className="mt-6 flex flex-wrap gap-2">
           {SKILLS.map((s) => (
-            <span key={s} className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-primary-soft text-primary text-sm font-medium">
+            <span key={s} className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-primary-soft text-highlight text-sm font-medium">
               {s}
             </span>
           ))}

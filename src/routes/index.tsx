@@ -37,13 +37,13 @@ function Home() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 lg:pt-24 lg:pb-32">
         <div className="grid md:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
           <div className="min-w-0">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-soft text-primary text-xs font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-soft text-highlight text-xs font-medium mb-6">
               <MapPin size={12} /> Based in {location}
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05]">
               Inga Nguse
             </h1>
-            <p className="mt-3 text-xl sm:text-2xl font-semibold text-primary">IT Support Specialist</p>
+            <p className="mt-3 text-xl sm:text-2xl font-semibold text-highlight">IT Support Specialist</p>
             <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
               IT Support Specialist with a strong foundation in information technology and a
               passion for solving complex technical challenges. Based in Port Elizabeth, South
@@ -111,7 +111,7 @@ function Home() {
               { icon: Lightbulb, title: "Innovation mindset", desc: "Always exploring better ways to solve real problems." },
             ].map((c) => (
               <div key={c.title} className="group bg-card rounded-2xl p-6 border border-border shadow-soft hover:shadow-card transition-all hover:-translate-y-0.5">
-                <div className="size-11 rounded-xl bg-primary-soft text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-highlight-foreground transition-colors">
+                <div className="size-11 rounded-xl bg-primary-soft text-highlight flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-highlight-foreground transition-colors">
                   <c.icon size={20} />
                 </div>
                 <h3 className="font-semibold text-foreground">{c.title}</h3>
@@ -132,7 +132,7 @@ function Home() {
             { n: "5+", l: "Years learning" },
           ].map((s) => (
             <div key={s.l} className="bg-card border border-border rounded-2xl p-6 text-center shadow-soft">
-              <div className="text-4xl font-bold text-primary">{s.n}</div>
+              <div className="text-4xl font-bold text-highlight">{s.n}</div>
               <div className="mt-1 text-sm text-muted-foreground">{s.l}</div>
             </div>
           ))}
@@ -148,7 +148,7 @@ function Home() {
           </p>
           <Link
             to="/contact"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-card text-primary px-6 py-3 text-sm font-semibold hover:bg-muted transition-colors"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-card text-highlight px-6 py-3 text-sm font-semibold hover:bg-muted transition-colors"
           >
             Start a conversation <ArrowRight size={16} />
           </Link>

@@ -80,7 +80,7 @@ function LocationEditor() {
 
   return (
     <section className="bg-card border border-border rounded-2xl p-6 shadow-soft">
-      <h2 className="font-semibold flex items-center gap-2"><MapPin size={16} className="text-primary" /> Location</h2>
+      <h2 className="font-semibold flex items-center gap-2"><MapPin size={16} className="text-highlight" /> Location</h2>
       <div className="mt-4 flex flex-col sm:flex-row gap-2">
         <input
           value={value}
@@ -90,7 +90,7 @@ function LocationEditor() {
         <button
           onClick={save}
           disabled={saving}
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-primary-hover disabled:opacity-60"
         >
           <Save size={14} /> {saving ? "Saving…" : savedAt ? "Saved" : "Save"}
         </button>
@@ -154,7 +154,7 @@ function CvEditor() {
 
   return (
     <section className="bg-card border border-border rounded-2xl p-6 shadow-soft">
-      <h2 className="font-semibold flex items-center gap-2"><FileText size={16} className="text-primary" /> CV (Download link)</h2>
+      <h2 className="font-semibold flex items-center gap-2"><FileText size={16} className="text-highlight" /> CV (Download link)</h2>
       <p className="mt-1 text-xs text-muted-foreground">Paste a public URL or upload a PDF. Leave blank to hide the Download CV button.</p>
       <div className="mt-4 flex flex-col sm:flex-row gap-2">
         <input
@@ -166,7 +166,7 @@ function CvEditor() {
         <button
           onClick={() => save()}
           disabled={saving}
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-primary-hover disabled:opacity-60"
         >
           <Save size={14} /> {saving ? "Saving…" : savedAt ? "Saved" : "Save"}
         </button>
@@ -189,7 +189,7 @@ function CvEditor() {
       </div>
       {error && <div className="mt-2 text-sm text-destructive">{error}</div>}
       {value && (
-        <button type="button" onClick={previewCv} className="mt-3 inline-block text-xs text-primary hover:underline">
+        <button type="button" onClick={previewCv} className="mt-3 inline-block text-xs text-highlight hover:underline">
           Preview current CV →
         </button>
       )}
@@ -293,7 +293,7 @@ function CertificateManager() {
 
         <button
           type="submit" disabled={uploading}
-          className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+          className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-primary-hover disabled:opacity-60"
         >
           <Upload size={14} /> {uploading ? "Uploading…" : "Upload certificate"}
         </button>
@@ -332,7 +332,7 @@ function CertificateManager() {
             <div className="flex items-center gap-1 flex-none">
               {editing?.id === c.id ? (
                 <>
-                  <button onClick={saveEdit} className="p-2 rounded-md hover:bg-primary-soft text-primary"><Save size={15} /></button>
+                  <button onClick={saveEdit} className="p-2 rounded-md hover:bg-primary-soft text-highlight"><Save size={15} /></button>
                   <button onClick={() => setEditing(null)} className="p-2 rounded-md hover:bg-muted"><X size={15} /></button>
                 </>
               ) : (
@@ -366,7 +366,7 @@ function Messages() {
 
   return (
     <section className="bg-card border border-border rounded-2xl p-6 shadow-soft">
-      <h2 className="font-semibold flex items-center gap-2"><Mail size={16} className="text-primary" /> Messages</h2>
+      <h2 className="font-semibold flex items-center gap-2"><Mail size={16} className="text-highlight" /> Messages</h2>
       <div className="mt-4 space-y-3">
         {msgs.length === 0 && <div className="text-sm text-muted-foreground">No messages yet.</div>}
         {msgs.map((m) => (

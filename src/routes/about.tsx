@@ -65,7 +65,7 @@ function About() {
           { icon: Compass, title: "Career Goals", body: "Grow into senior IT and cloud roles, specializing in service management, security, and automation." },
         ].map((c) => (
           <div key={c.title} className="bg-card border border-border rounded-2xl p-7 shadow-soft hover:shadow-card transition-shadow">
-            <div className="size-11 rounded-xl bg-primary-soft text-primary flex items-center justify-center mb-4">
+            <div className="size-11 rounded-xl bg-primary-soft text-highlight flex items-center justify-center mb-4">
               <c.icon size={20} />
             </div>
             <h3 className="font-semibold text-foreground text-lg">{c.title}</h3>

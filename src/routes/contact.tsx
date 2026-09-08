@@ -64,7 +64,7 @@ function Contact() {
                 href="tel:+27810049960"
                 className="flex items-center gap-4 group"
               >
-                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
+                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-highlight flex items-center justify-center">
                   <Phone size={20} />
                 </div>
                 <div className="min-w-0">
@@ -78,7 +78,7 @@ function Contact() {
                 href="mailto:inganguse09@gmail.com"
                 className="flex items-center gap-4 group"
               >
-                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-primary flex items-center justify-center">
+                <div className="size-11 shrink-0 rounded-xl bg-primary-soft text-highlight flex items-center justify-center">
                   <Mail size={20} />
                 </div>
                 <div className="min-w-0">
@@ -133,7 +133,7 @@ function Contact() {
         <form onSubmit={onSubmit} className="bg-card border border-border rounded-2xl p-7 shadow-soft space-y-4">
           <h2 className="text-xl font-semibold text-foreground">Send a message</h2>
           {sent && (
-            <div className="rounded-lg bg-primary-soft text-primary p-3 flex items-start gap-2 text-sm">
+            <div className="rounded-lg bg-primary-soft text-highlight p-3 flex items-start gap-2 text-sm">
               <CheckCircle2 size={16} className="mt-0.5 flex-none" />
               <span>Thank you! Your message has been received.</span>
             </div>

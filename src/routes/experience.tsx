@@ -67,11 +67,11 @@ function Experience() {
                 <div className="relative z-10 size-14 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center shadow-soft">
                   <e.icon size={22} />
                 </div>
-                <div className="mt-3 text-xs font-semibold text-primary text-left">{e.period}</div>
+                <div className="mt-3 text-xs font-semibold text-highlight text-left">{e.period}</div>
               </div>
               <div className="bg-card border border-border rounded-2xl p-6 shadow-soft">
                 <h3 className="text-lg font-semibold text-foreground">{e.title}</h3>
-                <p className="mt-0.5 text-sm text-primary font-medium">{e.role}</p>
+                <p className="mt-0.5 text-sm text-highlight font-medium">{e.role}</p>
                 <ul className="mt-4 space-y-2">
                   {e.points.map((p) => (
                     <li key={p} className="flex gap-2.5 text-sm text-muted-foreground">

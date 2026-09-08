@@ -85,7 +85,7 @@ function Auth() {
             </div>
           )}
           {error && <div className="text-sm text-destructive">{error}</div>}
-          {info && <div className="text-sm text-primary">{info}</div>}
+          {info && <div className="text-sm text-highlight">{info}</div>}
           <button
             type="submit"
             disabled={busy}
