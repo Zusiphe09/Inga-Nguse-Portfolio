@@ -61,7 +61,7 @@ function Reset() {
           </form>
         )}
         <div className="mt-6 text-center">
-          <Link to="/auth" className="text-xs text-muted-foreground hover:text-primary">Back to sign in</Link>
+          <Link to="/auth" className="text-xs text-muted-foreground hover:text-highlight">Back to sign in</Link>
         </div>
       </div>
     </div>

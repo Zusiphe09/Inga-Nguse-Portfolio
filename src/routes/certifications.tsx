@@ -141,7 +141,7 @@ function Certifications() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div className="max-w-2xl">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">Certifications</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Certifications</p>
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">Continuous learning</h1>
         <p className="mt-4 text-muted-foreground">
           Certificates are organised into folders. Open a folder to browse and preview its credentials.
@@ -164,7 +164,7 @@ function Certifications() {
                 className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 text-left shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-primary-soft opacity-60 transition-transform duration-500 group-hover:scale-125" />
-                <span className="relative grid size-12 place-items-center rounded-xl bg-primary-soft text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <span className="relative grid size-12 place-items-center rounded-xl bg-primary-soft text-primary transition-colors group-hover:bg-primary group-hover:text-highlight-foreground">
                   <Folder size={22} />
                 </span>
                 <h2 className="relative mt-4 font-semibold text-foreground">{cat.name}</h2>

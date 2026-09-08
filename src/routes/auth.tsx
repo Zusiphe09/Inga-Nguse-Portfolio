@@ -97,15 +97,15 @@ function Auth() {
         <div className="mt-5 flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
           {mode === "signin" ? (
             <>
-              <button onClick={() => { setMode("signup"); setError(null); setInfo(null); }} className="hover:text-primary">Create account</button>
-              <button onClick={() => { setMode("forgot"); setError(null); setInfo(null); }} className="hover:text-primary">Forgot password?</button>
+              <button onClick={() => { setMode("signup"); setError(null); setInfo(null); }} className="hover:text-highlight">Create account</button>
+              <button onClick={() => { setMode("forgot"); setError(null); setInfo(null); }} className="hover:text-highlight">Forgot password?</button>
             </>
           ) : (
-            <button onClick={() => { setMode("signin"); setError(null); setInfo(null); }} className="hover:text-primary">← Back to sign in</button>
+            <button onClick={() => { setMode("signin"); setError(null); setInfo(null); }} className="hover:text-highlight">← Back to sign in</button>
           )}
         </div>
         <div className="mt-6 text-center">
-          <Link to="/" className="text-xs text-muted-foreground hover:text-primary">Back to site</Link>
+          <Link to="/" className="text-xs text-muted-foreground hover:text-highlight">Back to site</Link>
         </div>
       </div>
     </div>

@@ -94,7 +94,7 @@ function Projects() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div className="max-w-2xl">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">Projects</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Projects</p>
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">Selected work</h1>
         <p className="mt-4 text-muted-foreground">Hands-on systems built to solve real operational problems.</p>
       </div>

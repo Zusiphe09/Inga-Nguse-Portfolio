@@ -111,7 +111,7 @@ function Home() {
               { icon: Lightbulb, title: "Innovation mindset", desc: "Always exploring better ways to solve real problems." },
             ].map((c) => (
               <div key={c.title} className="group bg-card rounded-2xl p-6 border border-border shadow-soft hover:shadow-card transition-all hover:-translate-y-0.5">
-                <div className="size-11 rounded-xl bg-primary-soft text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <div className="size-11 rounded-xl bg-primary-soft text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-highlight-foreground transition-colors">
                   <c.icon size={20} />
                 </div>
                 <h3 className="font-semibold text-foreground">{c.title}</h3>

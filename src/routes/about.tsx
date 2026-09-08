@@ -17,7 +17,7 @@ function About() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div className="max-w-2xl">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">About</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">About</p>
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">A bit about me</h1>
       </div>
 
@@ -75,7 +75,7 @@ function About() {
       </div>
 
       <div className="mt-16 rounded-3xl bg-muted/50 border border-border p-8 lg:p-12">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">Professional philosophy</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Professional philosophy</p>
         <p className="mt-4 text-xl lg:text-2xl text-foreground leading-relaxed font-medium">
           "Technology should empower, not frustrate. Every technical challenge is an opportunity
           to learn, improve, and deliver better solutions — for the people using the system

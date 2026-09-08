@@ -47,7 +47,7 @@ function Education() {
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div className="max-w-2xl">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">Education</p>
+        <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Education</p>
         <h1 className="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-foreground">Academic journey</h1>
         <p className="mt-4 text-muted-foreground">A solid foundation built at Nelson Mandela University.</p>
       </div>

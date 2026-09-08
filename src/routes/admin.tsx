@@ -32,7 +32,7 @@ function Admin() {
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider">Admin</p>
+          <p className="text-sm font-semibold text-highlight uppercase tracking-wider">Admin</p>
           <h1 className="mt-1 text-3xl font-bold">Dashboard</h1>
           <p className="mt-1 text-sm text-muted-foreground">Signed in as {user.email}</p>
         </div>
@@ -53,7 +53,7 @@ function Admin() {
       </div>
 
       <div className="mt-12 text-center">
-        <Link to="/" className="text-xs text-muted-foreground hover:text-primary">← Back to public site</Link>
+        <Link to="/" className="text-xs text-muted-foreground hover:text-highlight">← Back to public site</Link>
       </div>
     </div>
   );
@@ -325,7 +325,7 @@ function CertificateManager() {
               </div>
             ) : (
               <div className="min-w-0">
-                <a href={c.file_url} target="_blank" rel="noopener noreferrer" className="font-medium text-foreground hover:text-primary truncate block">{c.title}</a>
+                <a href={c.file_url} target="_blank" rel="noopener noreferrer" className="font-medium text-foreground hover:text-highlight truncate block">{c.title}</a>
                 <div className="text-xs text-muted-foreground">{c.provider}</div>
               </div>
             )}

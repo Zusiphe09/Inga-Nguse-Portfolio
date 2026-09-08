@@ -29,7 +29,7 @@ export function Layout({ children }: { children?: React.ReactNode }) {
             to="/admin"
             aria-label="Admin login"
             title="Admin login"
-            className="min-w-0 truncate font-bold text-lg tracking-tight text-foreground hover:text-primary transition-colors"
+            className="min-w-0 truncate font-bold text-lg tracking-tight text-foreground hover:text-highlight transition-colors"
           >
             Inga Nguse
           </Link>
